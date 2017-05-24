@@ -1,0 +1,152 @@
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    /*background-color: red;*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+#leftnav {
+  left: 0;
+  text-align: left;
+}
+
+#rightnav {
+  right: 0;
+  text-align: right;
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.image {
+   position: relative;
+}
+
+h6 {
+  position: absolute;
+  left: 0;
+  margin: 0 auto;
+  height: 50px;
+  margin-top: 8%;
+  margin-left: 20%;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    left: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    transition: margin-right .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/*CSS FOR POSES TEMPLATE*/
+
+/*sizing control for pose photo*/
+.posePhoto{
+  max-width: 250px;
+  max-height: : 250px;
+}
+
+/*sizing controll for chakra photo, WANT variable width*/
+.chakraPhoto{
+  height: 80px;
+}
+.poseName{
+  text-align: center;
+  font-size: 60px;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.dificultyText{
+  text-align: center;
+  font-size: 30px;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+/*CSS for User Profile*/
+
+.profilePhoto{
+  width:16em;
+  height:16em;
+  border-radius: 8em;
+  border: 5px solid black;
+}
+.userProfileBadges{
+  width: 3em;
+  height: 3em:
+}
+.badgeContainer{
+  margin-top: -3em;
+}
+.userNameText{
+  text-align: center;
+  font-size: 3em;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.dateJoinText{
+  text-align: center;
+}
+
+/*createUser CSS*/
+
+.createUser{
+  float: none;
+  margin-left: 15%;
+}
+
+.createUserbutton{
+  margin-left: 18%;
+}
+
+.center-block{
+  margin-left: auto;
+  display: block;
+  margin-right: auto;
+  float: none;
+}
+
+/*template example CSS*/
+.container1{
+  background: linear-gradient(rgba(255, 220, 90, 1),rgba(200, 255, 140, 1),rgba(203, 161, 249, 1));
+}
+.container2{
+  background: rgba(255, 185, 90, 1);
+}
+.container3{
+  background: linear-gradient(rgba(255, 90, 90, 1), rgba(255, 185, 90, 1), rgba(203, 161, 249, 1));
+}
