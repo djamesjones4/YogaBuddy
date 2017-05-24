@@ -1,9 +1,17 @@
 const express = require('express')
 const router = express.Router()
+const knex = require('../knex');
+const humps = require('humps');
 
-/* GET users listing. */
-router.get('/poses', function(req, res, next) {
-  res.send('respond with a resource')
+/* GET poses */
+
+router.get('/poses', (req, res, next) => {
+  res.render('index')
+  knex('yoga_poses')
+  .then(poses => {
+    console.log(poses);
+    res.send('poses')
+  })
 })
 
 module.exports = router
