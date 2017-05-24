@@ -1,12 +1,12 @@
 // Routes
 'use strict'
 
-const r = require('express').Router();
-const k = require('../knex');
-const humps = require('humps');
+const r = require('express').Router()
+const k = require('../knex')
+const humps = require('humps')
 // const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
-//HANDLING ALL MY ROUTING @ ONCE 👨🏻 LiL_Code
+// HANDLING ALL MY ROUTING @ ONCE 👨🏻 LiL_Code
 
 r.route('/')
 .get((req, res) => {
@@ -31,11 +31,11 @@ r.route('/:id')
     })
 })
 .patch((req, res, next) => {
-  k('users')
+  k('yoga_users')
     .where('id', req.params.id)
     // Thing you're updating (editing / patching)
     .update({ message: req.body.message })
-    .returning(['id', 'name', 'message'])
+    .returning(['id', 'username', 'email', 'profile_picture_img', 'bio'])
     .then((edit) => {
       res.send(edit[0])
     })
@@ -48,12 +48,12 @@ r.route('/:id')
 //      res.send(humps.camelizeKeys(oneThing[0]));
 //    });
 .delete((req, res) => {
-  let id = req.params.id;
-  k('users')
+  let id = req.params.id
+  k('yoga_users')
   .where('id', id)
-  .returning(['id', 'varchar', 'email', ])
+  .returning(['id', 'username', 'email', ' profile_picture_img', 'bio'])
     .del().then((oneThing) => {
-      res.send(humps.camelizeKeys(oneThing[0]));
-    });
-});
-module.exports = r;
+      res.send(humps.camelizeKeys(oneThing[0]))
+    })
+})
+module.exports = r
