@@ -1,5 +1,6 @@
-//Routes
-'use strict';
+// Routes
+'use strict'
+
 const r = require('express').Router();
 const k = require('../knex');
 const humps = require('humps');
@@ -7,16 +8,18 @@ const humps = require('humps');
 const jwt = require('jsonwebtoken')
 //HANDLING ALL MY ROUTING @ ONCE 👨🏻 LiL_Code
 
-r.route('/').get((req, res) => {
-    res.render('index')
-}).post((req, res) => {
-  k('users')
-  .returning(['id', 'varchar', 'email', ])
+r.route('/')
+.get((req, res) => {
+  res.render('index')
+})
+.post((req, res) => {
+  k('yogausers')
+  .returning(['id', 'varchar', 'email'])
     .insert(humps.decamelizeKeys(req.body))
     .then((oneThing) => {
-      res.send(humps.camelizeKeys(oneThing[0]));
-    }).done();
-});
+      res.send(humps.camelizeKeys(oneThing[0]))
+    }).done()
+})
 // ------------------------- BY ID -----------------------------
 r.route('/:id')
 .get((req, res) => {
@@ -24,20 +27,21 @@ r.route('/:id')
     k('users')
     .where('id', id)
     .then((oneThing) => {
-    res.send(humps.camelizeKeys(oneThing[0]));
+    res.send(humps.camelizeKeys(oneThing[0]))
   })
 })
 .patch((req, res, next) => {
   k('users')
     .where('id', req.params.id)
-    .update({ message: req.body.message }) //Thing you're updating (editing / patching)
+    // Thing you're updating (editing / patching)
+    .update({ message: req.body.message })
     .returning(['id', 'name', 'message'])
     .then((edit) => {
       res.send(edit[0])
     })
 })
 
-//.patch((req, res) => {
+// .patch((req, res) => {
 //  let id = req.params.id;
 //  k('users').where('id', id).returning(['id', 'varchar',  'email' ])
 //    .update(humps.decamelizeKeys(req.body)).then((oneThing) => {
