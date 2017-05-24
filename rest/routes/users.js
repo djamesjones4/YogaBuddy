@@ -14,10 +14,10 @@ r.route('/')
 })
 .post((req, res) => {
   k('yoga_users')
-  .returning(['id', 'varchar', 'email'])
+  .returning(['id', 'username', 'password', 'email', 'profile_picture_img', 'bio'])
     .insert(humps.decamelizeKeys(req.body))
-    .then((oneThing) => {
-      res.send(humps.camelizeKeys(oneThing[0]))
+    .then((usersData) => {
+      res.send(humps.camelizeKeys(usersData[0]))
     }).done()
 })
 // ------------------------- BY ID -----------------------------
