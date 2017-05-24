@@ -44,7 +44,7 @@ index.html
                 gapi.client.init({
                     'apiKey': 'AIzaSyDdI6E9S1As8XVZJ8oUAnbgS_41VwZRaFY',
                     'discoveryDocs': [discoveryUrl],
-                    'clientId': '179571929371-nvnof2jad7ueirv8e009nsnglr23j5fl.apps.googleusercontent.com',
+                    'clientId': '1037653344627-va0c0k2jbh4b1g83b133lej73nu0bclk.apps.googleusercontent.com',
                     'scope': SCOPE
                 }).then(function() {
                     GoogleAuth = gapi.auth2.getAuthInstance();
