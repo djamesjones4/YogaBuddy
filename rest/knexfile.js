@@ -1,10 +1,10 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/yogangular_dev'
+    connection: 'postgres://localhost/yogapp_dev'
   },
   test: {
     client: 'pg',
-  connection: 'postgres://localhost/yogangular_test'
+    connection: 'postgres://localhost/yogapp_test'
+  }
 }
-};
