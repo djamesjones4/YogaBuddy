@@ -6,16 +6,6 @@ const humps = require('humps')
 // const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
 
-// router.get('/poses', (req, res, next) => {
-//   res.render('index')
-//   knex('yoga_poses')
-//   .then(poses => {
-//     console.log(poses);
-//     res.send('poses')
-//   })
-// })
-//
-// module.exports = router
 r.route('/posts').get((req, res, next) => {
     res.render('index')
 }).post((req, res) => {
@@ -28,38 +18,38 @@ r.route('/posts').get((req, res, next) => {
     }).done();
 });
 // // ------------------------- BY ID -----------------------------
-// r.route('/:id')
-// .get((req, res) => {
-//   let id = req.params.id;
-//     k('users')
-//     .where('id', id)
-//     .then((oneThing) => {
-//     res.send(humps.camelizeKeys(oneThing[0]));
-//   })
-// })
-// .patch((req, res, next) => {
-//   k('users')
-//     .where('id', req.params.id)
-//     .update({ message: req.body.message }) //Thing you're updating (editing / patching)
-//     .returning(['id', 'name', 'message'])
-//     .then((edit) => {
-//       res.send(edit[0])
-//     })
-// })
-//
-// //.patch((req, res) => {
-// //  let id = req.params.id;
-// //  k('users').where('id', id).returning(['id', 'varchar',  'email' ])
-// //    .update(humps.decamelizeKeys(req.body)).then((oneThing) => {
-// //      res.send(humps.camelizeKeys(oneThing[0]));
-// //    });
-// .delete((req, res) => {
-//   let id = req.params.id;
-//   k('users')
-//   .where('id', id)
-//   .returning(['id', 'varchar', 'email', ])
-//     .del().then((oneThing) => {
-//       res.send(humps.camelizeKeys(oneThing[0]));
-//     });
+r.route('/:id')
+.get((req, res) => {
+  let id = req.params.id;
+    k('yoga_posts')
+    .where('id', id)
+    .then((posts) => {
+    res.send(humps.camelizeKeys(posts[0]));
+  })
+})
+.patch((req, res, next) => {
+  k('yoga_posts')
+    .where('id', req.params.id)
+    .update({ title: req.body.title, description: req.body.description}) //Thing you're updating (editing / patching)
+    .returning(['id', 'title', 'description'])
+    .then((posts) => {
+      res.send(posts[0])
+    })
+})
+
+.patch((req, res) => {
+ let id = req.params.id;
+ k('yoga_posts').where('id', id).returning(['id', 'title',  'email' ])
+   .update(humps.decamelizeKeys(req.body)).then((posts) => {
+     res.send(humps.camelizeKeys(oneThing[0]));
+   });
+.delete((req, res) => {
+  let id = req.params.id;
+  k('yoga_posts')
+  .where('id', id)
+  .returning(['user_id', 'title', 'description', 'post_id', 'post_id',  ])
+    .del().then((posts) => {
+      res.send(humps.camelizeKeys(posts[0]));
+    });
 // });
 // module.exports = r;
