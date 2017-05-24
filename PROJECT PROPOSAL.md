@@ -23,7 +23,7 @@ How do I know if my yoga posture is in alignment when I practice at home, withou
 
 Creates an online community for yoga practitioners to upload photos of themselves in different yoga asanas (postures), similar to Stackoverflow, that allows the user to get feedback on form correction. Community users can give advice on what adjustments are needed to make, to move deeper into a pose and further skills.
 
-# PROJECT OUTLINE
+# Q3 PROJECT OUTLINE
 
 ### Inputs:
 
