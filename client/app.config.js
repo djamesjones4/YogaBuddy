@@ -9,18 +9,19 @@
     $stateProvider // DEFINING ADDITIONAL STATES FOR Single-Page-Application
       .state({ // main state/component on every page
         name: 'app',
+        url: '/'
         component: 'app'
       })
-      .state({ // 1st STATE (on click in this case)
-        name: 'navigation',
-        url: '/',
-        component: 'navigation'
-      })
       // .state({ // 1st STATE (on click in this case)
-      //   name: 'posts',
+      //   name: 'app.splash',
       //   url: '/',
-      //   component: 'posts'
+      //   component: 'navigation'
       // })
+      .state({ // 1st STATE (on click in this case)
+        name: 'app.posts',
+        url: '/posts',
+        component: 'posts'
+      })
       // .state({ // 2nd STATE (on click in this case)
       //   name: 'app.edit',
       //   url: '/posts/:id',
@@ -31,11 +32,11 @@
       //   url: '/posts/:id/comments',
       //   component: 'comments'
       // })
-      // .state({ // 4th STATE (on click in this case)
-      //   name: 'app.users',
-      //   url: '/users/',
-      //   component: 'users'
-      // })
+      .state({ // 4th STATE (on click in this case)
+        name: 'app.users',
+        url: '/users',
+        component: 'users'
+      })
       // .state({ // 5th STATE (on click in this case)
       //   name: 'app.comment',
       //   url: '/posts/:id/comments',
