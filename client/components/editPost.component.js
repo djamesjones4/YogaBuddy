@@ -3,7 +3,7 @@
 
   angular.module('app')
     .component('editPost', {
-      templateUrl: '/templates/editPost.template.html',
+      templateUrl: '../templates/editPost.template.html',
       controller: editController
     })
 

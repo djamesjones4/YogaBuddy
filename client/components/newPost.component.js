@@ -3,7 +3,7 @@
 
   angular.module('app')
     .component('newPost', {
-      templateUrl: '/templates/newPost.template.html',
+      templateUrl: '../templates/newPost.template.html',
       controller: newPostController
     })
 

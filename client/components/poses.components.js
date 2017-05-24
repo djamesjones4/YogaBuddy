@@ -3,7 +3,7 @@
 
   angular.module('app')
     .component('poses',{
-      templateUrl: '/templates/poses.template.html',
+      templateUrl: '../templates/poses.template.html',
       controller: PosesController,
     })
     function PosesController() {

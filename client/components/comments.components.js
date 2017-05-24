@@ -3,7 +3,7 @@
 
   angular.module('app')
     .component('comments', {
-      templateUrl: '/templates/comments.template.html',
+      templateUrl: '../templates/comments.template.html',
       controller: CommentsController
     })
 

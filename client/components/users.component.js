@@ -3,7 +3,7 @@
 
   angular.module('app')
     .component('users', {
-      templateUrl: '/templates/users.template.html',
+      templateUrl: '../templates/users.template.html',
       controller: UsersController,
     })
 

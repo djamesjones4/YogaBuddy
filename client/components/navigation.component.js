@@ -3,7 +3,7 @@
 
   angular.module('app')
     .component('navigation', {
-      templateUrl: 'navigation.template.html',
+      templateUrl: '../navigation.template.html',
       controller: NavigationController,
     })
   // NavigationController.$inject = ['PostsService']
