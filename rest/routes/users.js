@@ -13,7 +13,7 @@ r.route('/')
   res.render('index')
 })
 .post((req, res) => {
-  k('yogausers')
+  k('yoga_users')
   .returning(['id', 'varchar', 'email'])
     .insert(humps.decamelizeKeys(req.body))
     .then((oneThing) => {
@@ -23,12 +23,12 @@ r.route('/')
 // ------------------------- BY ID -----------------------------
 r.route('/:id')
 .get((req, res) => {
-  let id = req.params.id;
-    k('users')
+  let id = req.params.id
+  k('yoga_users')
     .where('id', id)
-    .then((oneThing) => {
-    res.send(humps.camelizeKeys(oneThing[0]))
-  })
+    .then((userData) => {
+      res.send(humps.camelizeKeys(userData[0]))
+    })
 })
 .patch((req, res, next) => {
   k('users')
