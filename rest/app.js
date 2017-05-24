@@ -10,14 +10,12 @@ const users = require('./routes/users')
 const posts = require('./routes/posts')
 const poses = require('./routes/poses')
 const contributors = require('./routes/contributors')
-const 
 
 const app = express()
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
-
 
 // uncomment after placing your favicon in /public
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -29,6 +27,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', index)
 app.use('/users', users)
+app.use('./posts', posts)
+app.use('./poses', poses)
+app.use('./contributors', contributors)
 
 // feeds all angular routes to index.html
 app.use('*', function(req, res, next) {
