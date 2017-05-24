@@ -9,7 +9,7 @@ const index = require('./routes/index')
 const users = require('./routes/users')
 const posts = require('./routes/posts')
 const poses = require('./routes/poses')
-const contributors = require('./routes/contributors')
+// const contributors = require('./routes/contributors')
 
 const app = express()
 
@@ -25,7 +25,7 @@ app.use('/', index)
 app.use('/users', users)
 app.use('./posts', posts)
 app.use('./poses', poses)
-app.use('./contributors', contributors)
+// app.use('./contributors', contributors)
 
 // feeds all angular routes to index.html
 app.use('*', function(req, res, next) {
