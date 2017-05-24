@@ -13,7 +13,7 @@ r.route('/')
   res.render('index')
 })
 .post((req, res) => {
-  k('yogausers')
+  k('yoga_users')
   .returning(['id', 'varchar', 'email'])
     .insert(humps.decamelizeKeys(req.body))
     .then((oneThing) => {
@@ -24,14 +24,14 @@ r.route('/')
 r.route('/:id')
 .get((req, res) => {
   let id = req.params.id;
-    k('users')
+    k('yoga_users')
     .where('id', id)
     .then((oneThing) => {
     res.send(humps.camelizeKeys(oneThing[0]))
   })
 })
 .patch((req, res, next) => {
-  k('users')
+  k('yoga_users')
     .where('id', req.params.id)
     // Thing you're updating (editing / patching)
     .update({ message: req.body.message })
@@ -49,7 +49,7 @@ r.route('/:id')
 //    });
 .delete((req, res) => {
   let id = req.params.id;
-  k('users')
+  k('yoga_users')
   .where('id', id)
   .returning(['id', 'varchar', 'email', ])
     .del().then((oneThing) => {
