@@ -3,7 +3,7 @@ const router = express.Router()
 const knex = require('../knex');
 const humps = require('humps');
 
-/* GET poses */
+/* GET yoga_poses */
 
 router.get('/poses', (req, res, next) => {
   res.render('index')
