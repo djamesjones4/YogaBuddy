@@ -1,9 +1,12 @@
 exports.up = function(knex) {
   return knex.schema.createTable('posts', (table) => {
     table.increments();
-    table.string('varchar').notNullable().defaultTo('');
-    table.string('email').notNullable().unique();
-    table.specificType('hashed_password', 'char(60)').notNullable();
+    table.string('title').notNullable();
+    table.integer('user_id').notNullable().references('users.id').onDelete('CASCADE');
+    table.text('description').defaultTo('');
+    table.integer('pose_id').notNullable().references('poses.id').onDelete('CASCADE');
+    table.text('post_img').notNullable().defaultTo('');
+    table.text('post_video').defaultTo('');
     table.timestamps(true, true);
   });
 };
