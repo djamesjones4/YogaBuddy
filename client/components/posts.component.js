@@ -20,6 +20,7 @@
       PostsServices.allPosts() // Grabs all Posts
         .then((all) => {
           vm.posts = all
+          console.log(all);
         })
     }
 
@@ -27,7 +28,7 @@
       PostsServices.$like(post, dir) // Like functionality
     }
 
-  // THIS IS BROKEN ATM
+    // THIS IS BROKEN ATM
 
     // function sortPosts() {
     //   PostsServices.sorted()
