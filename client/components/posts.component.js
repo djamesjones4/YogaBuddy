@@ -19,8 +19,8 @@
     function onInit() {
       PostsServices.allPosts() // Grabs all Posts
         .then((all) => {
-          vm.posts = all
-          console.log(all);
+          vm.posts = all.data
+          console.log(vm.posts);
         })
     }
 
@@ -28,21 +28,6 @@
       PostsServices.$like(post, dir) // Like functionality
     }
 
-    // THIS IS BROKEN ATM
-
-    // function sortPosts() {
-    //   PostsServices.sorted()
-    //       .then((all) => {
-    //         return all
-    //       })
-    // }
-    //
-    // function sort() { // WORKS BUT YOU HAVE TO CLICK IT
-    //   PostsServices.sorted()
-    //   .then((all) => {
-    //     vm.posts = all
-    //   })
-    // }
 
   } // END CONTROLLER
 })()
