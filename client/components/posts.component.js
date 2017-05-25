@@ -9,7 +9,7 @@
 
   PostsController.$inject = ['PostsServices', '$stateParams', '$state']
 
-  function PostsController(PostsServices) {
+  function PostsController(PostsServices, $stateParams, $state) {
     const vm = this
     vm.$onInit = onInit
     vm.likes = likes
