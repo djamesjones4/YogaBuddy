@@ -8,8 +8,9 @@ const humps = require('humps')
 router.get('/', (req, res, next) => {
   res.render('index')
   knex('yoga_poses')
+  
   .then((poses) => {
-    res.send(poses)
+    res.render(poses)
   })
 })
 

@@ -29,6 +29,10 @@
       return $http.get('/posts').then(all => all.data)
     }
 
+    this.$onePost = function(id) { // Grab a post by ID
+      return $http.get(`/posts/${$stateParams.id}`).then(one => one.data)
+    }
+
     //
     // this.newPost = function(newPost) { // Makes new post
     //   $http.post('/posts', newPost)
@@ -50,10 +54,7 @@
     //     post.negative = !post.negative // makes my error pop out if they try and go past 0
     // }
     //
-    // this.$Post = function(id) { // Grab a post by ID
-    //   return $http.get(`posts/${$stateParams.id}`).then(one => one.data)
-    // }
-    //
+
     // this.edit = function(post) { // Patches current Post by ID
     //   $http.patch(`posts/${$stateParams.id}/`, post)
     //   $state.go('app.all')

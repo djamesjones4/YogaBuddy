@@ -2,8 +2,8 @@
   'use strict'
 
   angular.module('app')
-    .component('editPost', {
-      templateUrl: '/template/editPost.template.html',
+    .component('onePost', {
+      templateUrl: '/template/posts.template.html',
       controller: editController
     })
 

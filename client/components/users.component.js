@@ -3,7 +3,7 @@
 
   angular.module('app')
     .component('users', {
-      templateUrl: '../templates/users.template.html',
+      templateUrl: 'users.template.html',
       controller: UsersController,
     })
 
@@ -17,25 +17,27 @@
     vm.sortPosts = sortPosts
 
     function onInit() {
-      UsersServices.allPosts() // Grabs all Posts
+
+      UsersServices.$User() // Grabs all Posts
         .then((all) => {
-          vm.users = all
+          vm.user = all
         })
     }
 
-    function sortPosts() {
-      UsersServices.sorted()
-          .then((all) => {
-            return all
-          })
-    }
 
-    function sort() { // WORKS BUT YOU HAVE TO CLICK IT
-      UsersServices.sorted()
-      .then((all) => {
-        vm.users = all
-      })
-    }
+    // function sortPosts() {
+    //   UsersServices.sorted()
+    //       .then((all) => {
+    //         return all
+    //       })
+    // }
+    //
+    // function sort() { // WORKS BUT YOU HAVE TO CLICK IT
+    //   UsersServices.sorted()
+    //   .then((all) => {
+    //     vm.users = all
+    //   })
+    // }
 
     function likes(user, dir) {
       UsersServices.$like(user, dir) // Like functionality
