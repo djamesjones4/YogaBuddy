@@ -12,22 +12,23 @@ r.route('/')
     k('posts')
       .then((posts) => {
         console.log('posts', posts)
-            //     // return k('comments')
-            //     //   .whereIn('post_id', posts.map(p => p.id))
-            //     //   .then((comments) => {
-            //     //     const commentsByPostId = comments.reduce((result, comment) => {
-            //     //       result[comment.post_id] = result[comment.post_id] || []
-            //     //       result[comment.post_id].push(comment)
-            //     //       return result
-            //     //     }, {})
-            //     //     posts.forEach(post => {
-            //     //       post.comments = commentsByPostId[post.id] || []
-            //     //     })
-        res.json(posts)
-      })
+          return k('comments')
+            .whereIn('post_id', posts.map(p => p.id))
+            .then((comments) => {
+              const commentsByPostId = comments.reduce((result, comment) => {
+                result[comment.post_id] = result[comment.post_id] || []
+                result[comment.post_id].push(comment)
+
+                return result
+              }, {})
+              posts.forEach((post) => {
+                post.comments = commentsByPostId[post.id] || []
+              })
+              res.json(posts)
+            })
+    })
+      .catch(err => next(err))
   })
-  //     .catch(err => next(err))
-  // })
 //   .post((req, res) => {
 //     k('posts')
 //       .returning(['id', 'varchar', 'email', ])
@@ -38,15 +39,15 @@ r.route('/')
 //       }).done()
 //   })
 // // // ------------------------- BY ID -----------------------------
-// r.route('/:id')
-//   .get((req, res) => {
-//     let id = req.params.id
-//     k('posts')
-//       .where('id', id)
-//       .then((posts) => {
-//         res.send(humps.camelizeKeys(posts[0]))
-//       })
-//   })
+r.route('/:id')
+  .get((req, res) => {
+    let id = req.params.id
+    k('posts')
+      .where('id', id)
+      .then((posts) => {
+        res.send(humps.camelizeKeys(posts[0]))
+      })
+  })
 //   .patch((req, res, next) => {
 //     k('posts')
 //       .where('id', req.params.id)
