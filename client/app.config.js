@@ -44,7 +44,7 @@
     })
     .state({ // 1st STATE (on click in this case)
       name: 'poses',
-      url: '/poses2',
+      url: '/poses',
       component: 'poses'
     })
     .state({ // 1st STATE (on click in this case)
