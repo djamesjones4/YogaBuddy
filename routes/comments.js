@@ -9,7 +9,7 @@ r.route('/:post_id/comments')
     .catch(err => next(err))
  })
 //
-.post('/:post_id/comments', validate, (req, res, next) => {
+.post((req, res, next) => {
   k('comments')
     .insert({ content: req.body.content, post_id: req.params.post_id })
     .where({ post_id: req.params.post_id })
@@ -18,7 +18,7 @@ r.route('/:post_id/comments')
     .catch(err => next(err))
 })
 
-.patch('/:post_id/comments', validate, (req, res, next) => {
+.patch((req, res, next) => {
   k('comments')
     .update({ content: req.body.content })
     .where({ post_id: req.params.post_id, id: req.params.id })
@@ -27,7 +27,7 @@ r.route('/:post_id/comments')
     .catch(err => next(err))
 })
 
-.delete('/:post_id/comments', (req, res, next) => {
+.delete((req, res, next) => {
   k('comments')
     .del()
     .where({ post_id: req.params.post_id, id: req.params.id })
