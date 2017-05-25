@@ -2,8 +2,8 @@
   'use strict'
 
   angular.module('app')
-    .component('navigation', {
-      templateUrl: '../navigation.template.html',
+    .component('nav', {
+      // templateUrl: '/templates/navigation.template.html',
       controller: NavigationController,
     })
   // NavigationController.$inject = ['PostsService']
