@@ -7,9 +7,9 @@
 
   function service($http) {
 
-    // this.allUsers = function() { // Grabs all users
-    //   return $http.get('/users').then(all => all.data)
-    // }
+    this.allUsers = function() { // Grabs all users
+      return $http.get('/api/users').then(all => all.data)
+    }
 
     this.$User = function(id) { // Grab a user by ID
       return $http.get(`/api/users/${id}`).then(one => one.data)
