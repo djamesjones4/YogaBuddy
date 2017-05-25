@@ -17,38 +17,43 @@
         url: '/home',
         component: 'home'
       })
+      .state({ // 1st STATE (on click in this case)
+        name: 'main',
+        url: '/yogabuddy',
+        component: 'main'
+      })
     .state({ // 1st STATE (on click in this case)
-      name: 'posts',
+      name: 'main.posts',
       url: '/posts',
       component: 'posts'
     })
     .state({ // 2nd STATE (on click in this case)
-      name: 'home.post',
+      name: 'main.post',
       url: '/posts/:id',
       component: 'onePost'
     })
     .state({ // 3rd STATE (on click in this case)
-      name: 'home.comment',
+      name: 'main.comment',
       url: '/posts/:id/comments',
       component: 'comments'
     })
     .state({ // 4th STATE (on click in this case)
-      name: 'users',
+      name: 'main.users',
       url: '/users/:id',
       component: 'users'
     })
     .state({ // 1st STATE (on click in this case)
-      name: 'home.poses',
+      name: 'main.poses',
       url: '/poses',
       component: 'poses'
     })
     .state({ // 1st STATE (on click in this case)
-      name: 'home.pose',
+      name: 'main.pose',
       url: '/poses/:id',
       component: 'onePose'
     })
     .state({ // 5th STATE (on click in this case)
-      name: 'home.comment',
+      name: 'main.comment',
       url: '/posts/:id/comments',
       component: 'comments'
     })
