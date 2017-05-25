@@ -10,7 +10,7 @@ const jwt = require('jsonwebtoken')
 
 r.route('/')
 .get((req, res) => {
-console.log("homepage");
+console.log("homepage")
 })
 // .post((req, res) => {
 //   k('users')

@@ -45,12 +45,12 @@ r.route('/:id')
     })
 })
 
-// .patch((req, res) => {
-//  let id = req.params.id;
-//  k('users').where('id', id).returning(['id', 'varchar',  'email' ])
-//    .update(humps.decamelizeKeys(req.body)).then((oneThing) => {
-//      res.send(humps.camelizeKeys(oneThing[0]));
-//    });
+.patch((req, res) => {
+ let id = req.params.id;
+ k('users').where('id', id).returning(['id', 'varchar',  'email' ])
+   .update(humps.decamelizeKeys(req.body)).then((oneThing) => {
+     res.send(humps.camelizeKeys(oneThing[0]));
+   });
 .delete((req, res) => {
   let id = req.params.id
   k('users')
