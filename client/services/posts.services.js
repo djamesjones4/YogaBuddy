@@ -12,7 +12,7 @@
       return $http.get('/api/posts')
         .then((all) => {
           // all.data
-          console.log(all)
+          console.log(all.data)
         })
     }
 

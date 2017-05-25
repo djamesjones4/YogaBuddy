@@ -13,14 +13,12 @@
     const vm = this
     vm.$onInit = onInit
     vm.likes = likes
-    // vm.sort = sort
-    // vm.sortPosts = sortPosts
 
     function onInit() {
       PostsServices.allPosts() // Grabs all Posts
         .then((all) => {
-          vm.posts = all.data
-          console.log(vm.posts);
+          vm.posts = all
+          // console.log(all);
         })
     }
 
