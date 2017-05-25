@@ -5,7 +5,7 @@
     .service('CommentsServices', service)
   service.$inject = ['$http']
 
-  function service($http, $stateParams, $state) {
+  function service($http) {
 
     this.allComments = function(id) { // Grabs all comments per Post ID
       return $http.get(`/posts/${$stateParams.id}/comments`).then((all) => {
