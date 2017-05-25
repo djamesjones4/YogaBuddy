@@ -25,7 +25,12 @@
     // }
 
     this.allPosts = function() { // Grabs all posts
-      return $http.get('/posts').then(all => all.data)
+
+      return $http.get('/posts')
+      .then((all) => {
+        // all.data
+        console.log(all)
+      })
     }
 
     this.$onePost = function(id) { // Grab a post by ID

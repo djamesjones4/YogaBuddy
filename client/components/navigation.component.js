@@ -25,23 +25,23 @@
 
     function navBarProfile() {
       console.log("You clicked Profile");
-      $state.go( //RENDER PROFILE TEMPLATE ON PAGE// );
+      // $state.go(  ON PAGE);//RENDER PROFILE TEMPLATE
 
     }
 
     function navBarPoses() {
       console.log("You clicked poses");
-      $state.go(//RENDER POSES TEMPLATE ON PAGE// );
+      $state.go()//RENDER POSES TEMPLATE ON PAGE// );
     }
 
     function navBarNewPost() {
       console.log("You clicked NewPost");
-      $state.go(//RENDER NEWPOST TEMPLATE ON PAGE// );
+      $state.go()//RENDER NEWPOST TEMPLATE ON PAGE// );
     }
 
     function navBarSignOut() {
       console.log("You clicked Signout");
-      $state.go(//RENDER CONTRIBUTORS TEMPLATE ON PAGE// )
+      $state.go()//RENDER CONTRIBUTORS TEMPLATE ON PAGE// )
     }
 
     // .component('rightnavbar', {

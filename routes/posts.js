@@ -6,26 +6,28 @@ const humps = require('humps')
 // const bcrypt = require('bcrypt');
 // const jwt = require('jsonwebtoken')
 
-r.route('/posts')
-  .get((req, res, next) => {
-    knex('posts')
-      .then(posts => {
-        return knex('comments')
-          .whereIn('post_id', posts.map(p => p.id))
-          .then((comments) => {
-            const commentsByPostId = comments.reduce((result, comment) => {
-              result[comment.post_id] = result[comment.post_id] || []
-              result[comment.post_id].push(comment)
-              return result
-            }, {})
-            posts.forEach(post => {
-              post.comments = commentsByPostId[post.id] || []
-            })
-            res.json(posts)
-          })
+r.route('/')
+  .get((req, res) => {
+    console.log("in posts route")
+    k('posts')
+      .then((posts) => {
+        console.log('posts', posts)
+            //     // return knex('comments')
+            //     //   .whereIn('post_id', posts.map(p => p.id))
+            //     //   .then((comments) => {
+            //     //     const commentsByPostId = comments.reduce((result, comment) => {
+            //     //       result[comment.post_id] = result[comment.post_id] || []
+            //     //       result[comment.post_id].push(comment)
+            //     //       return result
+            //     //     }, {})
+            //     //     posts.forEach(post => {
+            //     //       post.comments = commentsByPostId[post.id] || []
+            //     //     })
+        res.json(posts)
       })
-      .catch(err => next(err))
   })
+  //     .catch(err => next(err))
+  // })
 //   .post((req, res) => {
 //     k('posts')
 //       .returning(['id', 'varchar', 'email', ])
@@ -74,4 +76,4 @@ r.route('/posts')
 //         res.send(humps.camelizeKeys(posts[0]))
 //       })
 //   })
-module.exports = r
+module.exports = r;

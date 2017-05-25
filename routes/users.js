@@ -11,7 +11,6 @@ const jwt = require('jsonwebtoken')
 r.route('/')
 .get((req, res) => {
  k('users')
-.select()
 .then((userData) => {
       res.send(humps.camelizeKeys(userData[0]))
     })
