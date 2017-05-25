@@ -7,9 +7,19 @@
       controller: PosesController
     })
 
-  PosesController.$inject = ['$http', '$stateParams', '$state']
+  PosesController.$inject = ['PosesService', '$http', '$stateParams', '$state']
 
-  function PosesController() {
+  function PosesController(PosesService, $http, $stateParams, $state) {
     console.log("you are in the Poses Controller")
+    const vm = this
+    vm.$onInit = onInit
+
+    function onInit() {
+      PosesService.allPoses()
+      .then((allposes) => {
+        console.log("all poses shuld be here: ", allposes)
+        vm.poses = allposes
+      })
+    }
   }
 })()

@@ -3,10 +3,10 @@
 
   angular.module('app')
     .service('PosesService', service)
-  service.$inject = ['$http', '$stateParams', '$state']
+
+  service.$inject = ['$http']
 
   function service($http, $stateParams, $state, $filter) {
-
 
 // THIS IS BROKEN ATM
 
@@ -26,10 +26,10 @@
     // }
 
     this.allPoses = function() { // Grabs all poses
-      return $http.get('/poses').then(all => all.data)
+      return $http.get('/api/poses').then(all => all.data)
     }
     this.$Pose = function(id) { // Grab a post by ID
-      return $http.get(`poses/${$stateParams.id}`).then(one => one.data)
+      return $http.get(`/api/poses/${id}`).then(one => one.data)
     }
 
     //
