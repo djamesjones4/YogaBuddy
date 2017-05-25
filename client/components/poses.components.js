@@ -2,7 +2,7 @@
   'use strict'
 
   angular.module('app')
-    .component('poses', {
+    .component('main.poses', {
       templateUrl: '/templates/poses.template.html',
       controller: PosesController
     })
