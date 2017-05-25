@@ -12,7 +12,7 @@ r.route('/')
     k('posts')
       .then((posts) => {
         console.log('posts', posts)
-            //     // return knex('comments')
+            //     // return k('comments')
             //     //   .whereIn('post_id', posts.map(p => p.id))
             //     //   .then((comments) => {
             //     //     const commentsByPostId = comments.reduce((result, comment) => {
@@ -76,4 +76,4 @@ r.route('/')
 //         res.send(humps.camelizeKeys(posts[0]))
 //       })
 //   })
-module.exports = r;
+module.exports = r
