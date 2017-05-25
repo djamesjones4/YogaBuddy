@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 
 <head>
   <meta charset="utf-8">
   <title>YOGA BUDDY COMPONENTS</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" href="/css/master.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link rel="stylesheet" href="../style/style.css">
 </head>
 
@@ -13,16 +12,151 @@
   <main>
     <h1>howdy cowboy</h1>
 
-    
+    <div ng-if="$ctrl.open">
+      <div class="col-md-8">
+        <form name="$ctrl.new" ng-submit="$ctrl.new.$valid && $ctrl.newPost()" novalidate>
+          <div class="form-group" ng-class="{'has-error': $ctrl.new.title.$touched && $ctrl.new.title.$invalid}">
+            <label for="title">Title</label>
+            <span ng-show="$ctrl.new.title.$invalid && $ctrl.new.title.$touched">Please enter a title.</span>
+            <input id="title" class="form-control" name="title" ng-model="$ctrl.post.title" type="text" required>
+          </div>
+          <div ng-class="{'has-error': $ctrl.new.body.$invalid && $ctrl.new.body.$touched}">
+            <label for="body">Description</label>
+            <span ng-show="$ctrl.new.body.$invalid && $ctrl.new.body.$touched">Your post must have content.</span>
+            <textarea ng-model="$ctrl.post.body" id="body" class="form-control" name="body" type="text" required></textarea>
+          </div>
+          <div ng-class="{'has-error': $ctrl.new.author.$invalid && $ctrl.new.author.$touched}">
+            <label for="author">Author</label>
+            <span class="has-error" ng-show="$ctrl.new.author.$invalid && $ctrl.new.author.$touched">I need to know who's post this is. Please add your name.</span>
+            <input id="author" ng-model="$ctrl.post.author" class="form-control" name="author" type="text" required>
+          </div>
+          <div ng-class="{'has-error': $ctrl.new.url.$invalid && $ctrl.new.url.$touched}">
+            <label for="image-url">Image URL</label>
+            <span ng-show="$ctrl.new.url.$invalid && $ctrl.new.url.$touched">This blog is for pictures!</span>
+            <input ng-model="$ctrl.post.image_url" id="image-url" class="form-control" name="url" type="text" required>
+          </div>
+
+          <!-- dropdowns for selection of pose -->
+        
+          <!-- Example split danger button -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger">Action</button>
+            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
+          <!-- <div class="dropdown">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Standing Poses
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Hip Openers
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Twists
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Back Bends
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Forward Bends
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Forward Bends
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Balance
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Inversions
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div> -->
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Create Post</button>
+            </div>
+
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+    <!-- END CREATE POST FORM -->
 
   </main>
 
 
-<!-- angular cdn -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
-<!-- custom js -->
-  <script src="/components/navigation.component.js" type="text/javascript"></script>
-  <script src="poses.component.js" type="text/javascript"></script>
+  <!-- angular cdn -->
+  <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script> -->
+  <!-- custom js -->
+  <!-- <script src="/components/navigation.component.js" type="text/javascript"></script> -->
+  <!-- <script src="poses.component.js" type="text/javascript"></script> -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 </body>
 
