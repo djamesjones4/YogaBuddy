@@ -16,6 +16,7 @@
     vm.gohome = gohome
     vm.splash = splash
     vm.addPost = addPost
+
     function onInit() {
       vm.navShow = false
     }
@@ -38,10 +39,10 @@
       $state.go('splash')
     }
 
-  function addPost(post) {
-  MainService.newPost(post)
-  $state.reload();
-  }
+    function addPost(post) {
+      MainService.newPost(post)
+      $state.reload();
+    }
 
   } // END HomeController
 }());
