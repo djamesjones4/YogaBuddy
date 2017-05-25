@@ -28,13 +28,13 @@
 
       return $http.get('/posts')
       .then((all) => {
-        // all.data
-        console.log(all)
+        all.data
+        // console.log(all)
       })
     }
 
     this.$onePost = function(id) { // Grab a post by ID
-      return $http.get(`/posts/${$stateParams.id}`).then(one => one.data)
+      return $http.get(`/posts/${$stateParams.id}`).then((one) => one.data)
     }
 
     //
