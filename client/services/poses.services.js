@@ -28,7 +28,7 @@
       return $http.get('/api/poses').then(all => all.data)
     }
     this.$Pose = function(id) { // Grab a post by ID
-      return $http.get(`poses/${id}`).then(one => one.data)
+      return $http.get(`/api/poses/${id}`).then(one => one.data)
     }
 
     //
