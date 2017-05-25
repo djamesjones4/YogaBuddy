@@ -2,11 +2,10 @@
   'use strict'
 
   angular.module('app')
-    .service('PostsService', service)
+    .service('PostsServices', service)
   service.$inject = ['$http', '$stateParams', '$state', '$filter']
 
   function service($http, $stateParams, $state, $filter) {
-
 
 // THIS IS BROKEN ATM
 

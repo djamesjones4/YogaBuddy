@@ -7,9 +7,9 @@
       controller: PostsController,
     })
 
-  PostsController.$inject = ['PostsService']
+  PostsController.$inject = ['PostsServices']
 
-  function PostsController(PostsService) {
+  function PostsController(PostsServices) {
     const vm = this
     vm.$onInit = onInit
     vm.likes = likes
@@ -17,33 +17,31 @@
     // vm.sortPosts = sortPosts
 
     function onInit() {
-      PostsService.allPosts() // Grabs all Posts
+      PostsServices.allPosts() // Grabs all Posts
         .then((all) => {
           vm.posts = all
         })
     }
 
     function likes(post, dir) {
-      PostsService.$like(post, dir) // Like functionality
+      PostsServices.$like(post, dir) // Like functionality
     }
 
   // THIS IS BROKEN ATM
 
     // function sortPosts() {
-    //   PostsService.sorted()
+    //   PostsServices.sorted()
     //       .then((all) => {
     //         return all
     //       })
     // }
     //
     // function sort() { // WORKS BUT YOU HAVE TO CLICK IT
-    //   PostsService.sorted()
+    //   PostsServices.sorted()
     //   .then((all) => {
     //     vm.posts = all
     //   })
     // }
 
-
-
   } // END CONTROLLER
-}());
+})()

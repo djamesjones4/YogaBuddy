@@ -4,12 +4,12 @@
   angular.module('app')
     .component('users', {
       templateUrl: '/templates/users.template.html',
-      controller: UsersController,
+      controller: UsersController
     })
 
-  UsersController.$inject = ['UsersServices', '$state']
+  UsersController.$inject = ['UsersServices']
 
-  function UsersController(UsersServices, $state) {
+  function UsersController(UsersServices) {
     console.log('in users controller fn')
     const vm = this
     vm.$onInit = onInit
@@ -17,11 +17,11 @@
     // vm.sort = sort
     vm.sortPosts = sortPosts
 
-    function onInit($state) {
-      UsersServices.$User() // Grabs all Posts
+    function onInit(id) {
+      UsersServices.$User(id) // Grabs one user
         .then((all) => {
           console.log('all: ', all)
-          vm.users = all.data
+          vm.users = all
         })
     }
 

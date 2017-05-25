@@ -8,7 +8,7 @@ const humps = require('humps')
 const jwt = require('jsonwebtoken')
 // HANDLING ALL MY ROUTING @ ONCE 👨🏻 LiL_Code
 
-r.route('/users')
+r.route('/')
 .get((req, res) => {
  k('users')
 .select()
