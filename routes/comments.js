@@ -2,14 +2,14 @@ const express = require('express')
 const router = express.Router()
 const knex = require('../knex')
 
-router.get('/:id', (req, res, next) => {
+router.get('/posts/:id/comments', (req, res, next) => {
   knex('yoga_comments')
     .where({ post_id: req.params.post_id })
     .then(comments => res.json(comments))
     .catch(err => next(err))
 })
 
-router.post('/:id', validate, (req, res, next) => {
+router.post('/posts/:id/comments', validate, (req, res, next) => {
   knex('yoga_comments')
     .insert({ content: req.body.content, post_id: req.params.post_id })
     .where({ post_id: req.params.post_id })
@@ -18,7 +18,7 @@ router.post('/:id', validate, (req, res, next) => {
     .catch(err => next(err))
 })
 
-router.patch('/:id', validate, (req, res, next) => {
+router.patch('/posts/:id/comments', validate, (req, res, next) => {
   knex('yoga_comments')
     .update({ content: req.body.content })
     .where({ post_id: req.params.post_id, id: req.params.id })
@@ -27,7 +27,7 @@ router.patch('/:id', validate, (req, res, next) => {
     .catch(err => next(err))
 })
 
-router.delete('/:id', (req, res, next) => {
+router.delete('/posts/:id/comments', (req, res, next) => {
   knex('yoga_comments')
     .del()
     .where({ post_id: req.params.post_id, id: req.params.id })
