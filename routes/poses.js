@@ -8,19 +8,18 @@ r.route('/')
   .get((req, res, next) => {
   k('poses')
     .then((poses) => {
-      console.log('poses');
-      // res.send(poses)
+      res.send(poses)
     })
 })
-//
-// r.router('/:id')
-// .get((req, res, next) => {
-//   let id = req.params.id
-//   k('poses')
-//     .where('id', id)
-//     .then((poses) => {
-//       res.send(humps.camelizeKeys(poses[0]))
-//     })
-// })
+
+r.route('/:id')
+.get((req, res, next) => {
+  let id = req.params.id
+  k('poses')
+    .where('id', id)
+    .then((poses) => {
+      res.send(humps.camelizeKeys(poses[0]))
+    })
+})
 
 module.exports = r

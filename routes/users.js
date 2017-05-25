@@ -12,7 +12,7 @@ r.route('/')
 .get((req, res) => {
  k('users')
 .then((userData) => {
-      res.send(humps.camelizeKeys(userData[0]))
+      res.send(humps.camelizeKeys(userData))
     })
 })
 .post((req, res) => {
