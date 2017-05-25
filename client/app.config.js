@@ -59,4 +59,4 @@
     })
 
   } // END CONFIG FUNCTION
-}());
+})()

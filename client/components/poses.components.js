@@ -1,12 +1,15 @@
-(function () {
+(function() {
   'use strict'
 
   angular.module('app')
-    .component('poses',{
+    .component('poses', {
       templateUrl: '/templates/poses.template.html',
-      controller: PosesController,
+      controller: PosesController
     })
-    function PosesController() {
-      console.log("you are in the Poses Controller");
-    }
-}());
+
+  PosesController.$inject = ['$http', '$stateParams', '$state']
+
+  function PosesController() {
+    console.log("you are in the Poses Controller")
+  }
+})()

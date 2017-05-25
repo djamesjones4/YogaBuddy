@@ -10,10 +10,10 @@ const jwt = require('jsonwebtoken')
 
 r.route('/')
 .get((req, res) => {
- k('users')
+  k('users')
 .then((userData) => {
-      res.send(humps.camelizeKeys(userData))
-    })
+  res.send(humps.camelizeKeys(userData))
+})
 })
 .post((req, res) => {
   k('users')
@@ -46,11 +46,12 @@ r.route('/:id')
 })
 
 .patch((req, res) => {
- let id = req.params.id;
- k('users').where('id', id).returning(['id', 'varchar',  'email' ])
+  let id = req.params.id
+  k('users').where('id', id).returning(['id', 'varchar', 'email'])
    .update(humps.decamelizeKeys(req.body)).then((oneThing) => {
-     res.send(humps.camelizeKeys(oneThing[0]));
-   });
+     res.send(humps.camelizeKeys(oneThing[0]))
+   })
+})
 .delete((req, res) => {
   let id = req.params.id
   k('users')
