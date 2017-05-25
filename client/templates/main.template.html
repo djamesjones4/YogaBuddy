@@ -1,0 +1,59 @@
+
+<div id="splashChakra" ng-click="$ctrl.splash()"> </div>
+<h1 ng-click="$ctrl.gohome()">HOME</h1>
+<p>^click home to go home This will be the parent state that gets passed to each child state </p>
+<h4>we can decide what to do here when ever you guys like Add nav bar/ chakra at top to go back to splash etc</h4>
+<!-- THIS IS THE FUNCTION I CALL IN MY home.component.js to change states to 'home.profile' -->
+<input type="button" value="Change states to feed/profile" ng-click="$ctrl.feed()">
+
+<div class="container">
+  <div class="row">
+    <div id="leftnav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeLeftNav()">&times;</a>
+    </div>
+    <div id="rightnav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeRightNav()">&times;</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- MAKE THIS APPEAR ON HOVER -->
+<div ng-show="showLeftNav">
+  <nav class="navbar navbar-default navbar-fixed-side">
+    <a ng-click="$ctrl.navBarProfile()">Profile</a>
+    <br>
+    <a ng-click="$ctrl.navBarPoses()">Poses</a>
+    <br>
+    <a ng-click="$ctrl.navBarNewPost()">New Post</a>
+    <br>
+    <a ng-click="$ctrl.navBarSignOut()">Sign Out</a>
+  </nav>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="leftnav" id="leftnav">
+      <span ng-click="showLeftNav = !showLeftNav">Navigation</span>
+    </div>
+    <div class="rightnav" id="rightnav">
+      <span ng-click="showRightNav = !showRightNav">Navigation</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAKE THIS APPEAR ON HOVER -->
+<div ng-show="showRightNav">
+  <nav class="navbar navbar-default navbar-fixed-side">
+
+    <div class="image">
+      <a ng-click="$ctrl.navBarChakra1()"><h6>Standing Poses</h6><img src="chakra1.png" alt="chakra1" width="30%"></a>
+      <a ng-click="$ctrl.navBarChakra2()"><h6>Hip Openers</h6><img src="chakra2.png" alt="chakra2" width="30%"></a>
+      <a ng-click="$ctrl.navBarChakra3()"><h6>Twists</h6><img src="chakra3.png" alt="chakra3" width="30%"></a>
+      <a ng-click="$ctrl.navBarChakra4()"><h6>Back Bends</h6><img src="chakra4.png" alt="chakra4" width="30%"></a>
+      <a ng-click="$ctrl.navBarChakra5()"><h6>Forward Bends</h6><img src="chakra5.png" alt="chakra5" width="30%"></a>
+      <a ng-click="$ctrl.navBarChakra6()"><h6>Balance</h6><img src="chakra6.png" alt="chakra6" width="30%"></a>
+      <a ng-click="$ctrl.navBarChakra7()"><h6>Inversions</h6><img src="chakra7.png" alt="chakra7" width="30%"></a>
+
+    </div>
+  </nav>

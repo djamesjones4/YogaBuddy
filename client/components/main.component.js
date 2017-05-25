@@ -2,14 +2,14 @@
   'use strict'
 
   angular.module('app')
-    .component('home', {
-      templateUrl: '/templates/home.template.html', // NAV BAR TEMPLATE
-      controller: HomeController
+    .component('main', {
+      templateUrl: '/templates/main.template.html', // NAV BAR TEMPLATE
+      controller: MainController
     })
   //ALLOWS US TO CHANGE STATES BY BUTTON CLICK
-  HomeController.$inject = ['$state']
+  MainController.$inject = ['MainService', '$stateParams', '$state']
 
-  function HomeController($state) {
+  function MainController(MainService, $stateParams, $state) {
     const vm = this
     vm.$onInit = onInit
     vm.feed = feed
@@ -23,7 +23,7 @@
     function feed() {
       //ALLOWS US TO CHANGE STATES BY BUTTON CLICK
       // REFER TO app.config.js TO CHECK STATES & CORRESPONDING COMPONENTS
-      $state.go('home.posts')
+      $state.go('main.posts')
     }
 
     function gohome() {

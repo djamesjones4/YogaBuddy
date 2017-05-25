@@ -19,44 +19,44 @@
       })
       .state({ // 1st STATE (on click in this case)
         name: 'main',
-        url: '/yogabuddy',
+        url: '/om',
         component: 'main'
       })
     .state({ // 1st STATE (on click in this case)
-      name: 'main.posts',
+      name: 'posts',
       url: '/posts',
       component: 'posts'
     })
     .state({ // 2nd STATE (on click in this case)
-      name: 'main.post',
+      name: 'post',
       url: '/posts/:id',
       component: 'onePost'
     })
     .state({ // 3rd STATE (on click in this case)
-      name: 'main.comment',
-      url: '/posts/:id/comments',
+      name: 'post.comment',
+      url: '/comments',
       component: 'comments'
     })
     .state({ // 4th STATE (on click in this case)
-      name: 'main.users',
+      name: 'users',
       url: '/users/:id',
       component: 'users'
     })
     .state({ // 1st STATE (on click in this case)
-      name: 'main.poses',
+      name: 'poses',
       url: '/poses',
       component: 'poses'
     })
     .state({ // 1st STATE (on click in this case)
-      name: 'main.pose',
+      name: 'pose',
       url: '/poses/:id',
       component: 'onePose'
     })
-    .state({ // 5th STATE (on click in this case)
-      name: 'main.comment',
-      url: '/posts/:id/comments',
-      component: 'comments'
-    })
+    // .state({ // 5th STATE (on click in this case)
+    //   name: 'comment',
+    //   url: '/posts/:id/comments',
+    //   component: 'comments'
+    // })
 
   } // END CONFIG FUNCTION
 })()
