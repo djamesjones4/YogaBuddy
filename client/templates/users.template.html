@@ -14,7 +14,7 @@
         <div class="container media-left media-middle">
 
           <div class="center-block">
-            <img src="/images/profilePictures/kevin.jpg" alt="profilePhoto" class="profilePhoto">
+            <img ng-src="{{profilePic}}" alt="profilePhoto" class="profilePhoto">
           </div>
 
 
@@ -25,7 +25,7 @@
 
         <div class="media-body">
           <div class="userNameText media-left">
-            <div><strong>Username</strong></div>
+            <div><strong>{{username}}</strong></div>
           </div>
           <div class="badgeContainer pull-right">
             <img src="/images/badges/whiteSkull.png" alt="crossBones" class="userProfileBadges">
@@ -33,15 +33,15 @@
             <img src="/images/badges/blueRibbon.png" alt="blueRibbon" class="userProfileBadges">
           </div>
           <div class="panel panel-default">
-            <div class="panel-heading"><strong>Bio</strong></div>
-            <div class="panel-body">Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon.Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon.Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon.Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon.Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon.Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon.Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon.Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon.Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon Bacon.
+            <div class="panel-heading"><strong>{Bio}</strong></div>
+            <div class="panel-body">{{bio}}
             </div>
           </div>
 
         </div>
         <div class="col-md-12">
           <div class="pull-right">
-            <strong>Member Since:</strong> (DATE HERE)
+            <strong>Member Since:</strong> {{createdAt}}
           </div>
           <br>
           <div class="pull-right">

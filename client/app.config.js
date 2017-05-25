@@ -32,11 +32,14 @@
     //   url: '/posts/:id/comments',
     //   component: 'comments'
     // })
-    // .state({ // 4th STATE (on click in this case)
-    //   name: 'home.users',
-    //   url: '/users/:id',
-    //   component: 'users'
-    // })
+    .state({ // 4th STATE (on click in this case)
+      name: 'home.users',
+      url: '/users/{id:int}',
+      component: 'users',
+      params: {
+        id: 0
+      }
+    })
     // .state({ // 1st STATE (on click in this case)
     //   name: 'home.poses',
     //   url: '/poses',

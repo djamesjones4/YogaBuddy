@@ -3,27 +3,32 @@
 
   angular.module('app')
     .component('users', {
-      templateUrl: 'users.template.html',
+      templateUrl: '/templates/users.template.html',
       controller: UsersController,
     })
 
-  UsersController.$inject = ['UsersServices']
+  UsersController.$inject = ['UsersServices', '$state']
 
-  function UsersController(UsersServices) {
+  function UsersController(UsersServices, $state) {
+    console.log('in users controller fn')
     const vm = this
     vm.$onInit = onInit
     vm.likes = likes
     // vm.sort = sort
     vm.sortPosts = sortPosts
 
-    function onInit() {
-
+    function onInit($state) {
       UsersServices.$User() // Grabs all Posts
         .then((all) => {
+          console.log('username', all.username)
           vm.user = all
+          vm.username = all.username
+          vm.profilePic = all.profile_picture_img
+          vm.bio = all.bio
+          vm.createdAt = all.created_at
+          $state.go('home.users')
         })
     }
-
 
     // function sortPosts() {
     //   UsersServices.sorted()
@@ -44,4 +49,4 @@
     }
 
   } // END CONTROLLER
-}());
+})()
