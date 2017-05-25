@@ -17,11 +17,11 @@
         url: '/home',
         component: 'home'
       })
-    .state({ // 1st STATE (on click in this case)
-      name: 'posts',
-      url: '/posts',
-      component: 'posts'
-    })
+    // .state({ // 1st STATE (on click in this case)
+    //   name: 'posts',
+    //   url: '/posts',
+    //   component: 'posts'
+    // })
     // .state({ // 2nd STATE (on click in this case)
     //   name: 'home.post',
     //   url: '/posts/:id',

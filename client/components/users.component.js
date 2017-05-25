@@ -13,9 +13,9 @@
     console.log('in users controller fn')
     const vm = this
     vm.$onInit = onInit
-    vm.likes = likes
+    // vm.likes = likes
     // vm.sort = sort
-    vm.sortPosts = sortPosts
+    // vm.sortPosts = sortPosts
 
     function onInit(id) {
       UsersServices.$User(id) // Grabs one user
@@ -39,9 +39,9 @@
     //   })
     // }
 
-    function likes(user, dir) {
-      UsersServices.$like(user, dir) // Like functionality
-    }
+    // function likes(user, dir) {
+    //   UsersServices.$like(user, dir) // Like functionality
+    // }
 
   } // END CONTROLLER
 })()

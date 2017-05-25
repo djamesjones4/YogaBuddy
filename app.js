@@ -28,9 +28,9 @@ app.use('/poses', poses)
 // app.use('./contributors', contributors)
 
 // feeds all angular routes to index.html
-// app.use('*', function(req, res, next) {
-//   res.sendFile('index.html', { root: path.join(__dirname, '/client') })
-// })
+app.use('*', function(req, res, next) {
+  res.sendFile('index.html', { root: path.join(__dirname, '/client') })
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
