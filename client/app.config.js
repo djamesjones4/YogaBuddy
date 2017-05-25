@@ -18,7 +18,7 @@
         component: 'home'
       })
     .state({ // 1st STATE (on click in this case)
-      name: 'home.posts',
+      name: 'posts',
       url: '/posts',
       component: 'posts'
     })
@@ -33,12 +33,9 @@
     //   component: 'comments'
     // })
     .state({ // 4th STATE (on click in this case)
-      name: 'home.users',
-      url: '/users/{id:int}',
-      component: 'users',
-      params: {
-        id: 0
-      }
+      name: 'users',
+      url: '/users/:id',
+      component: 'users'
     })
     // .state({ // 1st STATE (on click in this case)
     //   name: 'home.poses',

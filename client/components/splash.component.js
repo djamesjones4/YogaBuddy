@@ -17,7 +17,7 @@ vm.home = home
     }
 function home(){
 //ALLOWS US TO CHANGE STATES BY BUTTON CLICK
-$state.go('home.users')
+$state.go('users')
 }
   } // END SplashController
 }());

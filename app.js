@@ -29,8 +29,6 @@ app.use('/poses', poses)
 // app.use('./contributors', contributors)
 
 // // app.set('index', path.join(__dirname, 'client'));
-// app.set('views', 'views' );
-// app.set('view-engine', 'jade');
 
 // feeds all angular routes to index.html
 app.use('*', function(req, res, next) {

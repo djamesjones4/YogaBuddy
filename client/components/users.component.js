@@ -20,13 +20,8 @@
     function onInit($state) {
       UsersServices.$User() // Grabs all Posts
         .then((all) => {
-          console.log('username', all.username)
-          vm.user = all
-          vm.username = all.username
-          vm.profilePic = all.profile_picture_img
-          vm.bio = all.bio
-          vm.createdAt = all.created_at
-          $state.go('home.users')
+          console.log('all: ', all)
+          vm.users = all.data
         })
     }
 
