@@ -3,7 +3,7 @@
 
   angular.module('app')
     .service('PosesService', service)
-  service.$inject = ['$http', '$stateParams', '$state', '$filter']
+  service.$inject = ['$http', '$stateParams', '$state']
 
   function service($http, $stateParams, $state, $filter) {
 
