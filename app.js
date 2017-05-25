@@ -4,7 +4,6 @@ const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 
-
 const index = require('./routes/index')
 const users = require('./routes/users')
 const posts = require('./routes/posts')
@@ -21,11 +20,11 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'client')))
 
 // app.use('/', index)
-app.use('/users', users)
-app.use('/posts', posts)
-app.use('/posts', comments) // comment functionality per post
-app.use('/poses', poses)
-// app.use('./contributors', contributors)
+app.use('/api/users', users)
+app.use('/api/posts', posts)
+app.use('/api/posts', comments) // comment functionality per post
+app.use('/api/poses', poses)
+// app.use('/api/contributors', contributors)
 
 // feeds all angular routes to index.html
 app.use('*', function(req, res, next) {
