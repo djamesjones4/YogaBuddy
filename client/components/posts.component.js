@@ -7,7 +7,7 @@
       controller: PostsController,
     })
 
-  PostsController.$inject = ['PostsServices']
+  PostsController.$inject = ['PostsServices', '$stateParams', '$state']
 
   function PostsController(PostsServices) {
     const vm = this

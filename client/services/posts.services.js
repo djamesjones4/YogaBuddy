@@ -3,9 +3,9 @@
 
   angular.module('app')
     .service('PostsServices', service)
-  service.$inject = ['$http', '$stateParams', '$state', '$filter']
+  service.$inject = ['$http']
 
-  function service($http, $stateParams, $state, $filter) {
+  function service($http) {
 
 // THIS IS BROKEN ATM
 
