@@ -5,14 +5,14 @@
     .service('UsersServices', service)
   service.$inject = ['$http', '$stateParams', '$state', '$filter']
 
-  function service($http, $stateParams, $state, $filter) {
+  function service($http) {
 
     // this.allUsers = function() { // Grabs all users
     //   return $http.get('/users').then(all => all.data)
     // }
 
     this.$User = function(id) { // Grab a user by ID
-      return $http.get(`/users/${$stateParams.id}`).then(one => one.data)
+      return $http.get(`/users/${id}`).then(one => one.data)
     }
 
     this.createUser = function(createUser) { // Makes new user
@@ -21,7 +21,7 @@
     }
 
     this.$del = function(id) { // Removes User by ID
-      $http.delete(`/users/${$stateParams.id}`).then(d => $state.go('app.all'))
+      $http.delete(`/users/${id}`).then(d => $state.go('app.all'))
     }
 
     this.$like = function(user, dir) { // Handles both likes and dislikes
@@ -35,10 +35,8 @@
         user.negative = !user.negative // makes my error pop out if they try and go past 0
     }
 
-
-
     this.edit = function(user) { // Patches current User by ID
-      $http.patch(`/users/${$stateParams.id}/`, user)
+      $http.patch(`/users/${id}/`, user)
       $state.go('app.all')
     }
 
