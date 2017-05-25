@@ -3,7 +3,7 @@
 
   angular.module('app')
     .component('main', {
-      templateUrl: '/templates/main.template.html', // NAV BAR TEMPLATE
+      templateUrl: '/templates/main.template.html', //PARENT TEMPLETE
       controller: MainController
     })
   //ALLOWS US TO CHANGE STATES BY BUTTON CLICK
@@ -15,9 +15,9 @@
     vm.feed = feed
     vm.gohome = gohome
     vm.splash = splash
-
+    vm.addPost = addPost
     function onInit() {
-      // vm.navShow = false
+      vm.navShow = false
     }
 
     function feed() {
@@ -37,5 +37,11 @@
       // REFER TO app.config.js TO CHECK STATES & CORRESPONDING COMPONENTS
       $state.go('splash')
     }
+
+  function addPost(post) {
+  MainService.newPost(post)
+  $state.reload();
+  }
+
   } // END HomeController
 }());

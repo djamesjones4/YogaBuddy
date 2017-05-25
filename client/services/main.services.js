@@ -17,8 +17,8 @@
 
     this.newPost = function(newPost) { // Makes new post
       $http.post('/posts', newPost)
-      $state.reload();
     }
+
     //
     // this.$del = function(id) { // Removes Post by ID
     //   $http.delete(`/posts/${$stateParams.id}`).then(d => $state.go('app.all'))
