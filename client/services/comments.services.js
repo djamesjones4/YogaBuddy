@@ -3,7 +3,7 @@
 
   angular.module('app')
     .service('CommentsServices', service)
-  service.$inject = ['$http', '$stateParams', '$state']
+  service.$inject = ['$http']
 
   function service($http, $stateParams, $state) {
 

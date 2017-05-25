@@ -3,11 +3,11 @@
 
   angular.module('app')
     .component('comments', {
-      templateUrl: '../templates/comments.template.html',
+      templateUrl: '/templates/comments.template.html',
       controller: CommentsController
     })
 
-  CommentsController.$inject = ['PostsServices', 'CommentsServices']
+  CommentsController.$inject = ['PostsServices', 'CommentsServices', '$stateParams', '$state']
 
   function CommentsController(PostsServices, CommentsServices) {
     const vm = this
