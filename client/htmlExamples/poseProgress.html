@@ -10,140 +10,166 @@
 
 <body>
   <main>
-    <h1>howdy cowboy</h1>
 
-    <div ng-if="$ctrl.open">
-      <div class="col-md-8">
-        <form name="$ctrl.new" ng-submit="$ctrl.new.$valid && $ctrl.newPost()" novalidate>
-          <div class="form-group" ng-class="{'has-error': $ctrl.new.title.$touched && $ctrl.new.title.$invalid}">
+
+
+      <div class="container col-md-12">
+
+        <form name="$ctrl.userPostForm" ng-submit="$ctrl.userPostForm.$valid && $ctrl.newPost()" novalidate>
+
+          <div class="form-group" ng-class="{'has-error': $ctrl.userPostForm.title.$touched && $ctrl.userPostForm.title.$invalid || $ctrl.userPostForm.title.$pristine && $ctrl.userPostForm.title.$invalid}">
             <label for="title">Title</label>
-            <span ng-show="$ctrl.new.title.$invalid && $ctrl.new.title.$touched">Please enter a title.</span>
-            <input id="title" class="form-control" name="title" ng-model="$ctrl.post.title" type="text" required>
+            <input autofocus type="text" name="title" class="form-control" ng-model="$ctrl.post.title" ng-required="true" id="title" ng-minlength="3" ng-maxlength="50">
+            <p ng-show="userPostForm.title.$error.minlength" class="help-block">Title is too short.</p>
+            <p ng-show="userPostForm.title.$error.maxlength" class="help-block">Title is too long.</p>
           </div>
-          <div ng-class="{'has-error': $ctrl.new.body.$invalid && $ctrl.new.body.$touched}">
-            <label for="body">Description</label>
-            <span ng-show="$ctrl.new.body.$invalid && $ctrl.new.body.$touched">Your post must have content.</span>
-            <textarea ng-model="$ctrl.post.body" id="body" class="form-control" name="body" type="text" required></textarea>
+
+          <div ng-class="{'has-error': $ctrl.userPostForm.description.$touched && $ctrl.userPostForm.description.$invalid || $ctrl.userPostForm.description.$pristine && $ctrl.userPostForm.description.$invalid}">
+            <label for="description">Description</label>
+            <input autofocus type="text" name="description" class="form-control" ng-model="$ctrl.post.description" ng-required="true" id="description" ng-minlength="3" ng-maxlength="350">
+            <p ng-show="userPostForm.description.$error.minlength" class="help-block">Desciption is too short.</p>
+            <p ng-show="userPostForm.description.$error.maxlength" class="help-block">Desciption is too long.</p>
           </div>
-          <div ng-class="{'has-error': $ctrl.new.author.$invalid && $ctrl.new.author.$touched}">
-            <label for="author">Author</label>
-            <span class="has-error" ng-show="$ctrl.new.author.$invalid && $ctrl.new.author.$touched">I need to know who's post this is. Please add your name.</span>
-            <input id="author" ng-model="$ctrl.post.author" class="form-control" name="author" type="text" required>
-          </div>
-          <div ng-class="{'has-error': $ctrl.new.url.$invalid && $ctrl.new.url.$touched}">
+
+          <div ng-class="{'has-error': $ctrl.userPostForm.postImg.$touched && $ctrl.userPostForm.postImg.$invalid || $ctrl.userPostForm.postImg.$pristine && $ctrl.userPostForm.postImg.$invalid}">
             <label for="image-url">Image URL</label>
-            <span ng-show="$ctrl.new.url.$invalid && $ctrl.new.url.$touched">This blog is for pictures!</span>
-            <input ng-model="$ctrl.post.image_url" id="image-url" class="form-control" name="url" type="text" required>
+            <input autofocus type="url" name="postImg" class="form-control" ng-model="$ctrl.post.postImg" ng-required="true" id="postImg" ng-minlength="3" ng-maxlength="600">
+            <p ng-show="postForm.postImg.$error.minlength" class="help-block">Link to image is too short.</p>
+            <p ng-show="postForm.postImg.$error.maxlength" class="help-block">Link to image is too long.</p>
           </div>
+
+          <!-- selecter for the drop downs... think of it like a pose category selector, for the poses. -->
+          <!-- needs ng-click for falsing the ng-show on the other dropdowns, while trueing  the desired dropdown's ng-show -->
+          <!-- this will grab the id of the pose -->
+
+
+            <select class="btn-group">
+              <option class="dropdown-item" href="#">Standing Poses</option>
+              <option class="dropdown-item" href="#">Hip Openers</option>
+              <option class="dropdown-item" href="#">Back Bends</option>
+              <option class="dropdown-item" href="#">Forward Bends</option>
+              <option class="dropdown-item" href="#">Twists</option>
+              <option class="dropdown-item" href="#">Balance</option>
+              <option class="dropdown-item" href="#">Inversions</option>
+            </select>
 
           <!-- dropdowns for selection of pose -->
-        
-          <!-- Example split danger button -->
+
+          <!-- add ng-model these need to have an "ng-click" that will change the selected item to be at the top of the field, as so the user will have a clear idea as to what value has been selected. -->
+          <!-- also needs an ng-show associated with the previous dropdown that will show ONLY the dropdown selected -->
+          <!-- also needs an ng-repeat for each of the categories to show all of the different poses within the category -->
+
+
+
           <div class="btn-group">
-            <button type="button" class="btn btn-danger">Action</button>
-            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button type="button" class="btn">Standing Poses</button>
+            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="sr-only">Toggle Dropdown</span>
             </button>
             <div class="dropdown-menu">
+              <a class="dropdown-item disabled" href="#">Standing Poses</a>
+              <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Action</a>
               <a class="dropdown-item" href="#">Another action</a>
               <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <button type="button" class="btn">Hip Openers</button>
+            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item disabled" href="#">Hip Openers</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </div>
-          <!-- <div class="dropdown">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Standing Poses
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Hip Openers
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Twists
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Back Bends
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Forward Bends
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Forward Bends
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Balance
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Inversions
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div> -->
 
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary">Create Post</button>
+          <div class="btn-group">
+            <button type="button" class="btn">Back Bends</button>
+            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item disabled" href="#">Back Bends</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
             </div>
-
           </div>
 
+          <div class="btn-group">
+            <button type="button" class="btn">Forward Bends</button>
+            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item disabled" href="#">Forward Bends</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <button type="button" class="btn">Twists</button>
+            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item disabled" href="#">Twists</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <button type="button" class="btn">Balance</button>
+            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item disabled" href="#">Balance</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <button type="button" class="btn">Inversions</button>
+            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item disabled" href="#">Inversions</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+
+          <!-- this button needs to have a funciton that creates an object within our database that with all of the relevant information -->
+          <br>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Create Post</button>
+          </div>
 
         </form>
+
       </div>
-    </div>
+
     <!-- END CREATE POST FORM -->
 
   </main>
