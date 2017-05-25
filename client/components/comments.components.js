@@ -16,12 +16,12 @@
     vm.likes = likes
 
     function onInit(id) {
-      // PostsServices.$Post(id).then(post => { // Grabs an Individual post
-      //   vm.post = post
-      //   CommentsServices.allComments().then(all => { // Grabs all the memes
-      //     vm.comments = all
-      //   })
-      // })
+      PostsServices.$Post(id).then(post => { // Grabs an Individual post
+        vm.post = post
+        CommentsServices.allComments().then(all => { // Grabs all the memes
+          vm.comments = all
+        })
+      })
     }
 
     function likes(post, dir) { // Likes functionality
@@ -29,7 +29,7 @@
     }
 
     function addComment() {
-      // CommentsServices.addComment(vm.comment) // Adds a comment
+      CommentsServices.addComment(vm.comment) // Adds a comment
     }
 
   } // END CommentController
