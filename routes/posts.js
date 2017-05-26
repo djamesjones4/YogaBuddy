@@ -8,10 +8,10 @@ const humps = require('humps')
 
 r.route('/')
     .get((req, res) => {
-        console.log("in posts route")
+        // console.log("in posts route")
         k('posts')
             .then((posts) => {
-                console.log('posts', posts)
+                // console.log('posts', posts)
                 return k('comments')
                     .whereIn('post_id', posts.map(p => p.id))
                     .then((comments) => {
@@ -40,10 +40,12 @@ r.route('/')
 // // // ------------------------- BY ID -----------------------------
 r.route('/:id')
     .get((req, res) => {
+      console.log('post by id');
         let id = req.params.id
         k('posts')
             .where('id', id)
             .then((posts) => {
+              console.log(posts[0])
                 res.send(humps.camelizeKeys(posts[0]))
             })
     })

@@ -8,7 +8,7 @@
     <div class="well" ng-repeat="post in $ctrl.posts | filter:search | orderBy:-vote_count">
 
       <div class="media-left">
-<a ui-sref="post({id: post.id})">
+<a ui-sref="singlePostState({id: post.id})">
         <img class="media-object" ng-src="{{ post.post_img }}">
 </a>
         <!-- THIS IS THE IMAGE ASSOCIATED WITH THE POST -->

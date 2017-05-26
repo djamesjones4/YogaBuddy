@@ -13,7 +13,6 @@
     const vm = this
     vm.$onInit = onInit
     vm.likes = likes
-
     function onInit() {
       PostsServices.allPosts() // Grabs all Posts
         .then((all) => {
@@ -21,7 +20,6 @@
           // console.log(all);
         })
     }
-
     function likes(post, dir) {
       PostsServices.$like(post, dir) // Like functionality
     }

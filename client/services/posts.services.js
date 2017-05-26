@@ -8,16 +8,22 @@
   function service($http) {
 
     this.allPosts = function() { // Grabs all posts
-
       return $http.get('/api/posts')
         .then((all) => {
           return all.data
-          // console.log(all.data)
         })
     }
 
     this.$onePost = function(id) { // Grab a post by ID
-      return $http.get(`/api/posts/${id}`).then((one) => one.data)
+      return $http.get(`/api/posts/${id}`)
+       .then((one) => {
+         const post = one.data
+         return $http.get(`/api/posts/${id}/comments`)
+           .then(postComments => {
+             post.comments = postComments.data
+             return post
+           })
+       })
     }
 
 
