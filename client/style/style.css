@@ -175,6 +175,7 @@ body {
 
 .navToggle {
   width: 250px;
+  opacity: .5;
 }
 
 .sidenav {
@@ -202,7 +203,7 @@ body {
 
 #leftnav {
   left: 0;
-  text-align: left;
+  text-align: right;
 }
 
 #rightnav {
@@ -215,6 +216,7 @@ body {
 .glyphicon {
   color: black;
   font-size: 20px;
+  align-content: center;
 }
 
 .settings {
