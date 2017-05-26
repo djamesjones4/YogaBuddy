@@ -14,7 +14,6 @@
     //   return $http.get(`poses/${$stateParams.id}`).then(one => one.data)
     // }
 
-
     this.newPost = function(newPost) { // Makes new post
       $http.post('/posts', newPost)
     }
