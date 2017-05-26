@@ -18,36 +18,35 @@
     vm.addPost = addPost
 
     function onInit() {
-      vm.navShow = false
+      // vm.navShow = false
     }
 
     function feed() {
       //ALLOWS US TO CHANGE STATES BY BUTTON CLICK
       // REFER TO app.config.js TO CHECK STATES & CORRESPONDING COMPONENTS
-      $state.go('main.posts')
+      // $state.go('posts')
     }
 
     function gohome() {
       //ALLOWS US TO CHANGE STATES BY BUTTON CLICK
       // REFER TO app.config.js TO CHECK STATES & CORRESPONDING COMPONENTS
-      $state.go('home')
+      // $state.go('home')
     }
 
     function splash() {
       //ALLOWS US TO CHANGE STATES BY BUTTON CLICK
       // REFER TO app.config.js TO CHECK STATES & CORRESPONDING COMPONENTS
-      $state.go('splash')
+      // $state.go('splash')
     }
 
-    function addPost(post) {
-      MainService.newPost(post)
-      $state.reload();
-    }
+    // function addPost(post) {
+      // MainService.newPost(post)
+      // $state.reload();
+    // }
 
-    const vm = this
     vm.navBarProfile = navBarProfile
-    vm.navBarPostures = navBarPostures
-    vm.navBarSettings = navBarSettings
+    vm.navBarPoses = navBarPoses
+    vm.navBarNewPost = navBarNewPost
     vm.navBarSignOut = navBarSignOut
     vm.navBarChakra1 = navBarChakra1
     vm.navBarChakra2 = navBarChakra2
@@ -59,26 +58,20 @@
 
     function navBarProfile() {
       console.log("You clicked Profile");
-      // $state.go(  ON PAGE);//RENDER PROFILE TEMPLATE
-
     }
 
     function navBarPoses() {
       console.log("You clicked poses");
-      $state.go()//RENDER POSES TEMPLATE ON PAGE// );
     }
 
     function navBarNewPost() {
       console.log("You clicked NewPost");
-      $state.go()//RENDER NEWPOST TEMPLATE ON PAGE// );
     }
 
     function navBarSignOut() {
       console.log("You clicked Signout");
-      $state.go()//RENDER CONTRIBUTORS TEMPLATE ON PAGE// )
     }
 
-    // .component('rightnavbar', {
     function navBarChakra1() {
       console.log("You clicked Chakra 1");
     }
@@ -108,26 +101,26 @@
     }
 
     /* Set the width of the side navigation to 250px */
-    function openLeftNav() {
-      document.getElementById("leftnav").style.width = "250px";
-      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-    }
+    // function openLeftNav() {
+    //   document.getElementById("leftnav").style.width = "250px";
+    //   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    // }
 
     /* Set the width of the side navigation to 0 */
-    function closeLeftNav() {
-      document.getElementById("leftnav").style.width = "0";
-    }
+    // function closeLeftNav() {
+    //   document.getElementById("leftnav").style.width = "0";
+    // }
 
     /* Set the width of the side navigation to 250px */
-    function openRightNav() {
-      document.getElementById("rightnav").style.width = "250px";
-      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-    }
+    // function openRightNav() {
+    //   document.getElementById("rightnav").style.width = "250px";
+    //   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    // }
 
     // /* Set the width of the side navigation to 0 */
-    function closeRightNav() {
-      document.getElementById("rightnav").style.width = "0";
-    }
+    // function closeRightNav() {
+    //   document.getElementById("rightnav").style.width = "0";
+    // }
 
   } // END HomeController
 }());
