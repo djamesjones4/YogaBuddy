@@ -203,7 +203,7 @@ body {
 
 #leftnav {
   left: 0;
-  text-align: right;
+  text-align: left;
 }
 
 #rightnav {
@@ -220,7 +220,7 @@ body {
 
 .settings {
   color: violet;
-  text-align: right;
+  /*text-align: right;*/
 }
 
 .chakra1 {

@@ -23,12 +23,12 @@
         component: 'main'
       })
     .state({ // 1st STATE (on click in this case)
-      name: 'posts',
+      name: 'main.posts',
       url: '/posts',
       component: 'posts'
     })
     .state({ // 2nd STATE (on click in this case)
-      name: 'singlePostState',
+      name: 'main.singlePostState',
       url: '/post/:id',
       component: 'onePost'
     })
