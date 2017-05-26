@@ -264,7 +264,7 @@ h6 {
 
 #poseContainer {
   margin: auto;
-  padding: inherit;
+  margin-left: 10px;
 }
 
 /*sizing control for pose photo*/
