@@ -7,6 +7,7 @@ exports.seed = function(knex, Promise) {
         knex('comments').insert([
             {
                 id: 1,
+                likes: 75,
                 verified: false,
                 comment_text : "Keep pulling your shoulders apart, and don't allow your lower back to sag down. Also, the shoulder blades typically want to dip in the middle - don't let that happen. Keep pulling the shoulder blades outward.",
                 comment_img : "http://lovemyyoga.com/images/Upward%20Dog.jpg",
@@ -17,8 +18,9 @@ exports.seed = function(knex, Promise) {
             },
             {
                 id: 2,
+                likes: 2,
                 verified: false,
-                comment_text : "SAMPLE text here.",
+                comment_text : "Looks great!",
                 comment_img : "http://lovemyyoga.com/images/Upward%20Dog.jpg",
                 user_id: 4,
                 post_id: 2,
@@ -27,8 +29,9 @@ exports.seed = function(knex, Promise) {
             },
             {
                 id: 3,
+                likes: 1178,
                 verified: true,
-                comment_text : "SAMPLE text here.",
+                comment_text : "Mulabhanda!!!",
                 comment_img : "http://lovemyyoga.com/images/Upward%20Dog.jpg",
                 user_id: 5,
                 post_id: 3,
@@ -37,8 +40,9 @@ exports.seed = function(knex, Promise) {
             },
             {
                 id: 4,
+                likes: 50,
                 verified: true,
-                comment_text : "SAMPLE text here.",
+                comment_text : "Do you even yoga, bro!?",
                 comment_img : "http://lovemyyoga.com/images/Upward%20Dog.jpg",
                 user_id: 1,
                 post_id: 2,
@@ -47,8 +51,9 @@ exports.seed = function(knex, Promise) {
             },
             {
                 id: 5,
-                verified: false,
-                comment_text : "SAMPLE text here.",
+                likes: 9001,
+                verified: true,
+                comment_text : "Push through the balls of your feet. This will help you engage the inner thighs and allow you to get more arch in your back.",
                 comment_img : "http://lovemyyoga.com/images/Upward%20Dog.jpg",
                 user_id: 2,
                 post_id: 2,

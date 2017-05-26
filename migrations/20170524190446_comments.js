@@ -1,6 +1,7 @@
 exports.up = function(knex) {
   return knex.schema.createTable('comments', (table) => {
     table.increments()
+    table.integer('likes').defaultTo(0)
     table.boolean('verified').defaultTo(false)
     table.text('comment_text').notNullable().defaultTo('')
     table.text('comment_img').defaultTo('')

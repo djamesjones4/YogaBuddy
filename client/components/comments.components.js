@@ -18,8 +18,9 @@
     function onInit(id) {
       PostsServices.$Post(id).then(post => { // Grabs an Individual post
         vm.post = post
-        CommentsServices.allComments().then(all => { // Grabs all the memes
+        CommentsServices.allComments(id).then(all => { // Grabs all the memes
           vm.comments = all
+          console.log('all: ', all)
         })
       })
     }
