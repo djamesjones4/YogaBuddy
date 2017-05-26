@@ -1,15 +1,25 @@
 /*WEIRD SPLASH PAGE STUFF*/
 
+body {
+  font-family: 'Margarine', cursive;
+  background-color: teal;
+}
+
+.center{
+  text-align: center;
+}
+
 #splash {
   height: 100%;
   width: 100%;
 }
 
 #splashChakra {
-  height: 150px;
+  height: 250px;
   background-image: url(/images/splash/purpchakra.png);
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
 }
 
 .animated {
@@ -163,6 +173,10 @@
 
 /* The side navigation menu */
 
+.navToggle {
+  width: 250px;
+}
+
 .sidenav {
   height: 100%;
   /* 100% Full-height */
@@ -173,13 +187,17 @@
   z-index: 1;
   /* Stay on top */
   top: 0;
-  /*background-color: red;*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
   padding-top: 60px;
   /* Place content 60px from the top */
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.navHover {
+  color: white;
+  /*position: fixed;*/
 }
 
 #leftnav {
@@ -194,13 +212,57 @@
 
 
 /* The navigation menu links */
+.glyphicon {
+  color: black;
+  font-size: 20px;
+}
+
+.settings {
+  color: violet;
+  text-align: right;
+}
+
+.chakra1 {
+  color: red;
+  text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+}
+
+.chakra2 {
+  color: orange;
+  text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+}
+
+.chakra3 {
+  color: yellow;
+  text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+}
+
+.chakra4 {
+  color: green;
+  text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+}
+
+.chakra5 {
+  color: blue;
+  text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+}
+
+.chakra6 {
+  color: indigo;
+  text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+}
+
+.chakra7 {
+  color: violet;
+  text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+}
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 8px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
+  font-size: 50px;
+  /*color: red;*/
+  /*display: block;*/
   transition: 0.3s
 }
 
@@ -209,6 +271,7 @@
 }
 
 h6 {
+  font-size: 20px;
   position: absolute;
   left: 0;
   margin: 0 auto;
