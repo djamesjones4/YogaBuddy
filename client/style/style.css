@@ -262,6 +262,10 @@ h6 {
 
 /*CSS FOR POSES TEMPLATE*/
 
+#poseContainer {
+  margin: auto;
+  padding: inherit;
+}
 
 /*sizing control for pose photo*/
 
@@ -279,7 +283,7 @@ h6 {
 
 .poseName {
   padding-left: 10px;
-  text-align: left;
+  text-align: center;
   font-size: 60px;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
@@ -289,7 +293,7 @@ h5 {
 }
 
 span {
-  padding-left: 100px;
+  padding-left: 20px;
   text-align: right;
 }
 
