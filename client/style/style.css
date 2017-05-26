@@ -278,12 +278,20 @@ h6 {
 }
 
 .poseName {
-  text-align: center;
+  text-align: left;
   font-size: 60px;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
+.category {
+  padding-top: 15px;
+  text-align: right;
+  font-size: 30px;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
 .dificultyText {
+  padding-top: 15px;
   text-align: center;
   font-size: 30px;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
