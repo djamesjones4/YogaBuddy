@@ -15,7 +15,7 @@
     vm.feed = feed
     vm.gohome = gohome
     vm.splash = splash
-    vm.addPost = addPost
+    // vm.addPost = addPost
 
     function onInit() {
       // vm.navShow = false
@@ -100,27 +100,27 @@
       console.log("You clicked Chakra 7");
     }
 
-    /* Set the width of the side navigation to 250px */
-    // function openLeftNav() {
-    //   document.getElementById("leftnav").style.width = "250px";
-    //   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-    // }
+    /* Set the width of the side navigation to 50px */
+    function openLeftNav() {
+      document.getElementById("leftnav").style.width = "50px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
 
     /* Set the width of the side navigation to 0 */
-    // function closeLeftNav() {
-    //   document.getElementById("leftnav").style.width = "0";
-    // }
+    function closeLeftNav() {
+      document.getElementById("leftnav").style.width = "0";
+    }
 
-    /* Set the width of the side navigation to 250px */
-    // function openRightNav() {
-    //   document.getElementById("rightnav").style.width = "250px";
-    //   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-    // }
+    /* Set the width of the side navigation to 50px */
+    function openRightNav() {
+      document.getElementById("rightnav").style.width = "50px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
 
     // /* Set the width of the side navigation to 0 */
-    // function closeRightNav() {
-    //   document.getElementById("rightnav").style.width = "0";
-    // }
+    function closeRightNav() {
+      document.getElementById("rightnav").style.width = "0";
+    }
 
   } // END HomeController
 }());
