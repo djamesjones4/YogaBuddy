@@ -12,11 +12,11 @@
         url: '/',
         component: 'splash'
       })
-      .state({ // main state/component on every page
-        name: 'home',
-        url: '/home',
-        component: 'home'
-      })
+      // .state({ // main state/component on every page
+      //   name: 'home',
+      //   url: '/home',
+      //   component: 'home'
+      // })
       .state({ // 1st STATE (on click in this case)
         name: 'main',
         url: '/om',
@@ -43,7 +43,7 @@
       component: 'users'
     })
     .state({ // 1st STATE (on click in this case)
-      name: 'main.poses',
+      name: 'poses',
       url: '/poses',
       component: 'poses'
     })
