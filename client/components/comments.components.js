@@ -9,7 +9,7 @@
 
   CommentsController.$inject = ['PostsServices', 'CommentsServices', '$stateParams', '$state']
 
-  function CommentsController(PostsServices, CommentsServices) {
+  function CommentsController(PostsServices, CommentsServices, $stateParams, $state) {
     const vm = this
     vm.$onInit = onInit
     vm.addComment = addComment
