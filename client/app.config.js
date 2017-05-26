@@ -43,7 +43,7 @@
       component: 'users'
     })
     .state({ // 1st STATE (on click in this case)
-      name: 'poses',
+      name: 'main.poses',
       url: '/poses',
       component: 'poses'
     })
