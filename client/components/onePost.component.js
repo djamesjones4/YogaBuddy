@@ -3,13 +3,13 @@
 
   angular.module('app')
     .component('onePost', {
-      templateUrl: '/template/posts.template.html',
-      controller: editController
+      templateUrl: '/template/onePost.template.html',
+      controller: OnePostController
     })
 
-  editController.$inject = ['PostsService']
+  OnePostController.$inject = ['PostsServices']
 
-  function editController(PostsService) {
+  function OnePostController(PostsServices) {
     const vm = this
     vm.$onInit = onInit
     vm.editPost = editPost
@@ -18,6 +18,7 @@
     function onInit(id) {
       PostsService.$onePost(id).then((editable) => { // Grabs Post by ID
         vm.post = editable
+        console.log('editable: ', editable)
       })
     }
 
@@ -29,5 +30,5 @@
       // PostsService.$del(id) // Deletes Post by ID
     }
 
-  } // END editController
+  } // END OnePostController
 }());

@@ -29,14 +29,14 @@
     })
     .state({ // 2nd STATE (on click in this case)
       name: 'post',
-      url: '/posts/:id',
+      url: '/post/:id',
       component: 'onePost'
     })
-    .state({ // 3rd STATE (on click in this case)
-      name: 'post.comment',
-      url: '/comments',
-      component: 'comments'
-    })
+    // .state({ // 3rd STATE (on click in this case)
+    //   name: 'post.comment',
+    //   url: '/comments',
+    //   component: 'comments'
+    // })
     .state({ // 4th STATE (on click in this case)
       name: 'users',
       url: '/users/:id',

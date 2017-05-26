@@ -8,7 +8,8 @@
   function service($http) {
 
     this.allComments = function(id) { // Grabs all comments per Post ID
-      return $http.get(`/posts/${id}/comments`).then((all) => {
+      return $http.get(`/api/posts/${id}`).then((all) => {
+        console.log(all)
         return all.data
       })
     }

@@ -1,7 +1,7 @@
 const r = require('express').Router()
 const k = require('../knex')
 
-r.route('/:post_id/comments')
+r.route('/')
  .get((req, res, next) => {
   k('comments')
     .where({ post_id: req.params.post_id })
