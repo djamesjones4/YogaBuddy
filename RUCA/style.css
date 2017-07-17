@@ -8,8 +8,12 @@ header, main, footer {
   }
 }
 
+body {
+  background-color: ivory;
+}
+
 .collapsible-header {
-  padding-left: 30px !important;
+  padding-left: 32px !important;
 }
 
 .chakras {
@@ -21,7 +25,21 @@ h6 {
   vertical-align: middle;
 }
 
-img {
+.chakraImg {
   margin-left: 175px;
   vertical-align: middle;
+}
+
+/*FEED PAGE*/
+
+.card {
+  /*width: 50%;*/
+}
+
+.card-image {
+  border-bottom: 2px solid gray;
+}
+
+.pageTitle {
+  padding-bottom: 60px;
 }
