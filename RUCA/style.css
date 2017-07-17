@@ -1,0 +1,27 @@
+header, main, footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+.collapsible-header {
+  padding-left: 30px !important;
+}
+
+.chakras {
+  margin-top: 20px;
+}
+
+h6 {
+  text-align: left;
+  vertical-align: middle;
+}
+
+img {
+  margin-left: 175px;
+  vertical-align: middle;
+}
