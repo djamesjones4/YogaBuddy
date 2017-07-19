@@ -27,17 +27,12 @@ body {
   vertical-align: middle !important;
 }
 .chakraAnchor {
-  /*display: inline-block !important;*/
   vertical-align: middle !important;
-  /*line-height: 60px !important;*/
-}
-h6 {
-  text-align: left;
-  vertical-align: middle;
 }
 
+
 .chakraImg {
-  margin-left: 80px;
+  margin-left: 70px;
   vertical-align: middle;
   /*display;*/
 }
@@ -46,34 +41,39 @@ h6 {
 }
 
 #chakra3 {
-  margin-left: 99px;
+  margin-left: 103px;
 }
 #chakra4 {
-  margin-left: 82px;
+  margin-left: 72px;
 }
 #chakra5 {
-  margin-left: 69px;
+  margin-left: 45px;
 
 }
 #chakra6 {
-  margin-left: 95px;
+  margin-left: 90px;
 
 }
 #chakra7 {
-  margin-left: 83px;
+  margin-left: 66px;
 }
 
 #newPostButton {
   background-color: rgba(241, 41, 35, 0.7);
-  /*border: 1px solid black;*/
   border-radius: 35px;
   color: black;
 }
 
 .side-nav {
 /*background: rgba(0, 0, 0, 0.4)*/
+<<<<<<< HEAD
 font-size: 300px !important;
 text-align: left;
+=======
+font-size: 50px !important;
+text-align: left;
+/*font-weight: bold !important;*/
+>>>>>>> dj
 }
 
 #sidenav-overlay {
