@@ -72,7 +72,8 @@ h6 {
 
 .side-nav {
 /*background: rgba(0, 0, 0, 0.4)*/
-z-index: 1 !important;
+font-size: 300px !important;
+text-align: left;
 }
 
 #sidenav-overlay {
