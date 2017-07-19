@@ -1,0 +1,223 @@
+header, main, footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+body {
+  background-color: #F1F1F1;
+}
+
+.collapsible-header {
+  padding-left: 32px !important;
+}
+
+.chakraList {
+
+}
+.chakras {
+  vertical-align: baseline;
+  line-height: 100px;
+  text-align: left;
+  padding: 10px !important;
+  vertical-align: middle !important;
+}
+.chakraAnchor {
+  /*display: inline-block !important;*/
+  vertical-align: middle !important;
+  /*line-height: 60px !important;*/
+}
+h6 {
+  text-align: left;
+  vertical-align: middle;
+}
+
+.chakraImg {
+  margin-left: 80px;
+  vertical-align: middle;
+  /*display;*/
+}
+#chakra2 {
+
+}
+
+#chakra3 {
+  margin-left: 99px;
+}
+#chakra4 {
+  margin-left: 82px;
+}
+#chakra5 {
+  margin-left: 69px;
+
+}
+#chakra6 {
+  margin-left: 95px;
+
+}
+#chakra7 {
+  margin-left: 83px;
+}
+
+#newPostButton {
+  background-color: rgba(241, 41, 35, 0.7);
+  /*border: 1px solid black;*/
+  border-radius: 35px;
+  color: black;
+}
+
+.side-nav {
+/*background: rgba(0, 0, 0, 0.4)*/
+z-index: 1 !important;
+}
+
+#sidenav-overlay {
+    /*margin-left: 300px;*/
+    z-index: 1 !important;
+    /*position: static !important;*/
+    /*display: none;*/
+}
+
+.navbar-fixed {
+/*z-index: 997 !important;*/
+}
+/*FEED PAGE*/
+
+.card {
+}
+
+.card-image {
+  /*border-bottom: 2px solid gray;*/
+}
+h2 {
+  padding-right: 110px;
+}
+.pageTitle {
+  top: 0;
+  left: 0;
+  padding-top: 5px;
+  /*padding-bottom: 10px;*/
+  text-align: center;
+  /*background: #FFFFFF;*/
+  background-color: rgba(255,255,255,0.9);
+  position: sticky;
+  display: block;
+  z-index: 2;
+  vertical-align: middle;
+  font-family: 'Amatic SC', cursive;
+
+}
+
+.menuIcon {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.container {
+  z-index: 2;
+}
+.btn-floating {
+  z-index: 0 !important;
+}
+
+.btn {
+  z-index: 0 !important;
+}
+
+/* Lotus Logo Styling */
+
+.animated {
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+}
+
+#animated-example {
+  z-index: 2;
+  background-image: url(/images/lotus/lotus_top.png);
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 0px;
+  margin-left: 30px;
+  margin-right: 0px;
+}
+
+
+/* Pulse */
+
+/*@keyframes lotus-pulse {
+  25% {
+    transform: scale(1.0);
+  }
+  75% {
+    transform: scale(.98);
+  }
+}*/
+
+.lotus-pulse {
+  z-index: 1;
+  background-size: contain;
+  width: 50px;
+  height: 30px;
+  background-image: url(/images/lotus/lotus_bottom.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*display: inline-block;*/
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-right: 0px;
+  /*transform: perspective(1px) translateZ(0);
+  animation-name: lotus-pulse;
+  animation-duration: 2.75s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;*/
+}
+
+
+/* Curl Bottom Right */
+
+#lotusCurl {
+  /*height: 100px;*/
+  /*width: 10px;*/
+  background-image: url(/images/lotus/lotus_bottom.png);
+}
+
+/*.lotus-curl-bottom-right {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+
+.lotus-curl-bottom-right:before {
+  pointer-events: none;
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  bottom: 0;
+  right: 0;
+  background: white;
+}*/
+
+/* End Lotus Logo styling */
