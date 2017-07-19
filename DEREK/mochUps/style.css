@@ -25,11 +25,10 @@ body {
   text-align: left;
   padding: 10px !important;
   vertical-align: middle !important;
+
 }
 .chakraAnchor {
-  /*display: inline-block !important;*/
   vertical-align: middle !important;
-  /*line-height: 60px !important;*/
 }
 h6 {
   text-align: left;
@@ -65,14 +64,15 @@ h6 {
 
 #newPostButton {
   background-color: rgba(241, 41, 35, 0.7);
-  /*border: 1px solid black;*/
   border-radius: 35px;
   color: black;
 }
 
 .side-nav {
 /*background: rgba(0, 0, 0, 0.4)*/
-z-index: 1 !important;
+font-size: 300px !important;
+text-align: left;
+/*font-weight: bold !important;*/
 }
 
 #sidenav-overlay {
