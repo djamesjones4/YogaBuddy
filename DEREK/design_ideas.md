@@ -11,6 +11,6 @@
 - <del>background-color light grey with white material on top youtube style</del>
 - <del>create favicon perhaps from chakra image</del>
 - hook up angular sorting
-- change look of button
-- YogaBuddy Logo
-  - position to the right of the menu icon
+- <del>change look of button</del>
+- <del>YogaBuddy Logo
+  - position to the right of the menu icon</del>

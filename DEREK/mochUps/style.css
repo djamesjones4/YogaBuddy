@@ -66,14 +66,9 @@ body {
 
 .side-nav {
 /*background: rgba(0, 0, 0, 0.4)*/
-<<<<<<< HEAD
-font-size: 300px !important;
-text-align: left;
-=======
 font-size: 50px !important;
 text-align: left;
 /*font-weight: bold !important;*/
->>>>>>> dj
 }
 
 #sidenav-overlay {
@@ -101,9 +96,7 @@ h2 {
   top: 0;
   left: 0;
   padding-top: 5px;
-  /*padding-bottom: 10px;*/
   text-align: center;
-  /*background: #FFFFFF;*/
   background-color: rgba(255,255,255,0.9);
   position: sticky;
   display: block;
@@ -202,23 +195,50 @@ h2 {
   background-image: url(/images/lotus/lotus_bottom.png);
 }
 
-/*.lotus-curl-bottom-right {
-  display: inline-block;
+/* End Lotus Logo styling */
+/* ----------------------------------------------------------------------- */
+/* BEGIN PROFILE STYLING */
+.profileContainer {
+  padding: 10px;
+}
+.profileHead{
+  background-color: white;
+  border-radius: 10px;
+  max-height: 200px;
+  padding: 10px;
   vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  position: relative;
+}
+img.profileImage {
+  vertical-align: middle;
+  max-height: 180px;
+  border-radius: 35%;
+  border: 1px solid black;
+}
+.profPicContainer {
+  vertical-align: middle !important;
+  margin: 10px;
+  /*padding-top: 10px;*/
+  max-height: 180px;
 }
 
-.lotus-curl-bottom-right:before {
-  pointer-events: none;
-  position: absolute;
-  content: '';
-  height: 0;
-  width: 0;
-  bottom: 0;
-  right: 0;
-  background: white;
-}*/
+.profilePostContainer {
+  /*max-height: 500px;*/
+}
 
-/* End Lotus Logo styling */
+.profPostPicContainer {
+  display: inline-block;
+  height: 160px;
+  width: 500px;
+  margin-bottom: 25px;
+}
+
+.profPostImage {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.postTitle {
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+}
