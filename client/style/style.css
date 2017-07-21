@@ -1,0 +1,244 @@
+header, main, footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+body {
+  background-color: #F1F1F1;
+}
+
+.collapsible-header {
+  padding-left: 32px !important;
+}
+
+.chakraList {
+
+}
+.chakras {
+  vertical-align: baseline;
+  line-height: 100px;
+  text-align: left;
+  padding: 10px !important;
+  vertical-align: middle !important;
+}
+.chakraAnchor {
+  vertical-align: middle !important;
+}
+
+
+.chakraImg {
+  margin-left: 70px;
+  vertical-align: middle;
+  /*display;*/
+}
+#chakra2 {
+
+}
+
+#chakra3 {
+  margin-left: 103px;
+}
+#chakra4 {
+  margin-left: 72px;
+}
+#chakra5 {
+  margin-left: 45px;
+
+}
+#chakra6 {
+  margin-left: 90px;
+
+}
+#chakra7 {
+  margin-left: 66px;
+}
+
+#newPostButton {
+  background-color: rgba(241, 41, 35, 0.7);
+  border-radius: 35px;
+  color: black;
+}
+
+.side-nav {
+/*background: rgba(0, 0, 0, 0.4)*/
+font-size: 50px !important;
+text-align: left;
+/*font-weight: bold !important;*/
+}
+
+#sidenav-overlay {
+    /*margin-left: 300px;*/
+    z-index: 1 !important;
+    /*position: static !important;*/
+    /*display: none;*/
+}
+
+.navbar-fixed {
+/*z-index: 997 !important;*/
+}
+/*FEED PAGE*/
+
+.card {
+}
+
+.card-image {
+  /*border-bottom: 2px solid gray;*/
+}
+h2 {
+  padding-right: 110px;
+}
+.pageTitle {
+  top: 0;
+  left: 0;
+  padding-top: 5px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.9);
+  position: sticky;
+  display: block;
+  z-index: 2;
+  vertical-align: middle;
+  font-family: 'Amatic SC', cursive;
+
+}
+
+.menuIcon {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.container {
+  z-index: 2;
+}
+.btn-floating {
+  z-index: 0 !important;
+}
+
+.btn {
+  z-index: 0 !important;
+}
+
+/* Lotus Logo Styling */
+
+.animated {
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+}
+
+#animated-example {
+  z-index: 2;
+  background-image: url(/images/lotus/lotus_top.png);
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 0px;
+  margin-left: 30px;
+  margin-right: 0px;
+}
+
+
+/* Pulse */
+
+/*@keyframes lotus-pulse {
+  25% {
+    transform: scale(1.0);
+  }
+  75% {
+    transform: scale(.98);
+  }
+}*/
+
+.lotus-pulse {
+  z-index: 1;
+  background-size: contain;
+  width: 50px;
+  height: 30px;
+  background-image: url(/images/lotus/lotus_bottom.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*display: inline-block;*/
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-right: 0px;
+  /*transform: perspective(1px) translateZ(0);
+  animation-name: lotus-pulse;
+  animation-duration: 2.75s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;*/
+}
+
+
+/* Curl Bottom Right */
+
+#lotusCurl {
+  /*height: 100px;*/
+  /*width: 10px;*/
+  background-image: url(/images/lotus/lotus_bottom.png);
+}
+
+/* End Lotus Logo styling */
+/* ----------------------------------------------------------------------- */
+/* BEGIN PROFILE STYLING */
+.profileContainer {
+  padding: 10px;
+}
+.profileHead{
+  background-color: white;
+  border-radius: 10px;
+  max-height: 200px;
+  padding: 10px;
+  vertical-align: middle;
+}
+img.profileImage {
+  vertical-align: middle;
+  max-height: 180px;
+  border-radius: 35%;
+  border: 1px solid black;
+}
+.profPicContainer {
+  vertical-align: middle !important;
+  margin: 10px;
+  /*padding-top: 10px;*/
+  max-height: 180px;
+}
+
+.profilePostContainer {
+  /*max-height: 500px;*/
+}
+
+.profPostPicContainer {
+  display: inline-block;
+  height: 160px;
+  width: 500px;
+  margin-bottom: 25px;
+}
+
+.profPostImage {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.postTitle {
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+}

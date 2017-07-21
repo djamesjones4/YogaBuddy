@@ -9,6 +9,7 @@ const users = require('./routes/users')
 const posts = require('./routes/posts')
 const poses = require('./routes/poses')
 const comments = require('./routes/comments')
+const feed = require('./routes/feed')
 // const contributors = require('./routes/contributors')
 
 const app = express()
@@ -20,6 +21,7 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'client')))
 
 // app.use('/', index)
+app.use('/', feed)
 app.use('/api/users', users)
 app.use('/api/posts', posts)
 app.use('/api/posts', comments) // comment functionality per post

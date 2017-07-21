@@ -1,10 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
   <head>
     <meta charset="utf-8">
     <title></title>
+    <base href="/">
+    <link rel="stylesheet" href="/style/style.css">
+
+    <!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="chakras/chakra7.ico">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
   </head>
   <body>
-    STUFFS HERE
+    <ui-view></ui-view>
+    <feed></feed>
+
+    <!-- Angular 1.6.4 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <!-- UI-ROUTER -->
+    <script src="https://cdn.jsdelivr.net/angular.ui-router/1.0.1/angular-ui-router.min.js"></script>
+
+    <!-- ANGULAR MOMENT (STUFF FOR TIME FORMATTING) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/1.0.1/angular-moment.js"></script>
+
+    <!-- Compiled and minified JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+    <!-- OUR ANGULAR CODE -->
+    <!-- MAIN APP STUFF -->
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+
+    <!-- JAVASCRIPTS -->
+    <script src="/js/nav.js"></script>
+
+    <!-- SERVICES -->
+    <script src="/services/feed.services.js"></script>
+
+    <!-- COMPONENTS -->
+    <script src="/components/feed.component.js"></script>
   </body>
 </html>
