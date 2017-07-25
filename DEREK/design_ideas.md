@@ -14,3 +14,5 @@
 - <del>change look of button</del>
 - <del>YogaBuddy Logo
   - position to the right of the menu icon</del>
+- make comment button take you to new page with the post and all its comments
+- bring nav under header
