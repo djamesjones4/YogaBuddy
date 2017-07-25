@@ -33,7 +33,7 @@
                     user_id: 2,
                     description : "I am a climber and I would like to incorporate stretching into my regiment. What poses are the best for beginners? My arms and back need the most attention.",
                     pose_id: 2,
-                    post_img : "/images/wheel.jpg",
+                    post_img : "/images/profilePictures/rucalovewheel.jpg",
                     post_video : "",
                     created_at : new Date('2016-06-29 14:26:16 UTC'),
                     updated_at : new Date('2016-06-29 14:26:16 UTC')

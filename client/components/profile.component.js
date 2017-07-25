@@ -16,6 +16,16 @@
 
     function onInit() {
       $(".button-collapse").sideNav()
+
+      ProfileService.allItems()
+        .then((allitems) => {
+          vm.items = allitems
+        })
+
+        ProfileService.allPosts()
+          .then((allposts) => {
+            vm.posts = allposts
+          })
     }
   }
 })()
