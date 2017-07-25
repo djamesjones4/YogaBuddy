@@ -242,3 +242,9 @@ img.profileImage {
   text-align: center;
   font-family: 'Amatic SC', cursive;
 }
+
+/* SPLASH PAGE */
+
+.splashContainer {
+background-color: white ; 
+}

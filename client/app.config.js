@@ -7,11 +7,11 @@
 
     $locationProvider.html5Mode(true) // Setting clean URLs (no hashtags)
     $stateProvider // DEFINING ADDITIONAL STATES FOR Single-Page-Application
-      // .state({ // 1st STATE (on click in this case)
-      //   name: 'main',
-      //   url: '/',
-      //   component: 'main'
-      // })
+      .state({ // 1st STATE (on click in this case)
+        name: 'splash',
+        url: '/',
+        component: 'splash'
+      })
       .state({ // main state/component on every page
         name: 'feed',
         url: '/feed',
