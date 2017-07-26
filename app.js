@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'client')))
 app.use('/', feed)
 app.use('/api/users', users)
 app.use('/api/posts', posts)
-app.use('/api/posts', comments) // comment functionality per post
+app.use('/api/posts', comments)
 app.use('/api/poses', poses)
 // app.use('/api/contributors', contributors)
 
