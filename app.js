@@ -20,7 +20,6 @@ app.use(bodyParser.json())
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'client')))
 
-// app.use('/', index)
 app.use('/', feed)
 app.use('/api/users', users)
 app.use('/api/posts', posts)

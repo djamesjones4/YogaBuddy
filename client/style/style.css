@@ -81,13 +81,13 @@ text-align: left;
 .navbar-fixed {
 /*z-index: 997 !important;*/
 }
+/* ------------------------------------------------------------------*/
 /*FEED PAGE*/
 
 .card {
 }
 
 .card-image {
-  /*border-bottom: 2px solid gray;*/
 }
 h2 {
   padding-right: 110px;
@@ -121,7 +121,7 @@ h2 {
 .btn {
   z-index: 0 !important;
 }
-
+/* ------------------------------------------------------------ */
 /* Lotus Logo Styling */
 
 .animated {
@@ -243,8 +243,12 @@ img.profileImage {
   font-family: 'Amatic SC', cursive;
 }
 
+/* ------------------------------------------------------------------*/
 /* SPLASH PAGE */
 
 .splashContainer {
-background-color: white ; 
+background-color: white ;
+}
+.login {
+
 }

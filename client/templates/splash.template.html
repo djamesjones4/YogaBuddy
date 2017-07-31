@@ -1,3 +1,15 @@
-<div class="splashContainer">
-  <!-- <h2>Spalsh Page</h2> -->
+<div class="splashContainer row">
+  <div class="formContainer col m6 offset-m4">
+    <form class="login col m6" action="" method="post"
+    ng-submit="$ctrl.logIn()">
+      <input type="text" id="usernameInput" name="username" value="" placeholder="username" ng-model="$ctrl.userAuth.username">
+      <input type="text" id="passwordInput" name="password" value="" placeholder="password" ng-model="$ctrl.userAuth.password">
+      <button type="submit" name="submit">Log In</button>
+    </form>
+    <div class="createAccount">
+      <span class="center">Or</span>
+      <a id="createAccountAnchor" href="#">Create Account</a>
+    </div>
+  </div>
+
 </div>
