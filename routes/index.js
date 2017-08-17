@@ -1,19 +1,19 @@
 // Routes
 'use strict'
 
-const r = require('express').Router();
-const k = require('../knex');
+const router = require('express').Router();
+const knex = require('../knex');
 const humps = require('humps');
-// const bcrypt = require('bcrypt');
+// const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken')
 //HANDLING ALL MY ROUTING @ ONCE 👨🏻 LiL_Code
 
-r.route('/')
+router.route('/')
 .get((req, res) => {
 console.log("homepage")
 })
 // .post((req, res) => {
-//   k('users')
+//   knex('users')
 //   .returning(['id', 'varchar', 'email'])
 //     .insert(humps.decamelizeKeys(req.body))
 //     .then((oneThing) => {
@@ -21,10 +21,10 @@ console.log("homepage")
 //     }).done()
 // })
 // // ------------------------- BY ID -----------------------------
-// r.route('/:id')
+// router.route('/:id')
 // .get((req, res) => {
 //   let id = req.params.id;
-//     k('users')
+//     knex('users')
 //     .where('id', id)
 //     .then((oneThing) => {
 //     res.send(humps.camelizeKeys(oneThing[0]))
@@ -56,4 +56,4 @@ console.log("homepage")
 //       res.send(humps.camelizeKeys(oneThing[0]));
 //     });
 // });
-module.exports = r;
+module.exports = router

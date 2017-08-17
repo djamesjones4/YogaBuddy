@@ -1,25 +1,25 @@
-const r = require('express').Router()
-const k = require('../knex')
+const router = require('express').Router()
+const knex = require('../knex')
 const humps = require('humps')
 
 /* GET poses */
 
-r.route('/')
+router.route('/')
   .get((req, res, next) => {
-  k('poses')
+  knex('poses')
     .then((poses) => {
       res.send(poses)
     })
 })
 
-r.route('/:id')
+router.route('/:id')
 .get((req, res, next) => {
   let id = req.params.id
-  k('poses')
+  knex('poses')
     .where('id', id)
     .then((poses) => {
       res.send(humps.camelizeKeys(poses[0]))
     })
 })
 
-module.exports = r
+module.exports = router

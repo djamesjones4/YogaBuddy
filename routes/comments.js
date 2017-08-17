@@ -1,16 +1,16 @@
-const r = require('express').Router()
-const k = require('../knex')
+const router = require('express').Router()
+const knex = require('../knex')
 
-r.route('/:post_id/comments')
+router.route('/:post_id/comments')
  .get((req, res, next) => {
-  k('comments')
+  knex('comments')
     .where({ post_id: req.params.post_id })
     .then(comments => res.json(comments))
     .catch(err => next(err))
  })
 //
 .post((req, res, next) => {
-  k('comments')
+  knex('comments')
     .insert({ content: req.body.content, post_id: req.params.post_id })
     .where({ post_id: req.params.post_id })
     .returning('*')
@@ -19,7 +19,7 @@ r.route('/:post_id/comments')
 })
 
 .patch((req, res, next) => {
-  k('comments')
+  knex('comments')
     .update({ content: req.body.content })
     .where({ post_id: req.params.post_id, id: req.params.id })
     .returning('*')
@@ -46,4 +46,4 @@ function validate(req, res, next) {
   next()
 }
 
-module.exports = r
+module.exports = router

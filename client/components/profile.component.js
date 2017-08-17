@@ -19,13 +19,15 @@
 
       ProfileService.allItems()
         .then((allitems) => {
-          vm.items = allitems
+          // get by id after tokens are set up
+          vm.items = allitems[0]
         })
 
-        ProfileService.allPosts()
-          .then((allposts) => {
-            vm.posts = allposts
-          })
+      ProfileService.allPosts()
+        .then((allposts) => {
+          // get by id after tokens are set up
+          vm.posts = allposts
+        })
     }
   }
 })()

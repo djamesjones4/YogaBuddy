@@ -4,25 +4,25 @@
 const router = require('express').Router()
 const knex = require('../knex')
 const humps = require('humps')
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 // HANDLING ALL MY ROUTING @ ONCE 👨🏻 LiL_Code
 
-// router.route('/')
-// .get((req, res) => {
-//   knex('users')
-// .then((userData) => {
-//   res.send(humps.camelizeKeys(userData))
-// })
-// })
-// .post((req, res) => {
-//   knex('users')
-//   .returning(['id', 'username', 'password', 'email', 'profile_picture_img', 'bio'])
-//     .insert(humps.decamelizeKeys(req.body))
-//     .then((usersData) => {
-//       res.send(humps.camelizeKeys(usersData[0]))
-//     }).done()
-// })
+router.route('/')
+.get((req, res) => {
+  knex('users')
+.then((userData) => {
+  res.send(humps.camelizeKeys(userData))
+})
+})
+.post((req, res) => {
+  knex('users')
+  .returning(['id', 'username', 'password', 'email', 'profile_picture_img', 'bio'])
+    .insert(humps.decamelizeKeys(req.body))
+    .then((usersData) => {
+      res.send(humps.camelizeKeys(usersData[0]))
+    }).done()
+})
 // ------------------------- BY ID -----------------------------
 
 router.post('/', function(req, res, next) {

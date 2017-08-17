@@ -1,13 +1,13 @@
 <!-- BEGIN PROFILE CONTAINER -->
 <div class="row">
-  <div class="profileContainer col s12 m8 offset-m2" ng-model="item in $ctrl.items">
+  <div class="profileContainer col s12 m8 offset-m2" ng-model="$ctrl.items">
     <div class="row">
       <div class="col s12 m12 profileHead z-depth-1">
         <div class="profPicContainer">
-          <img class="profileImage z-depth-1 hoverable" src={{item.profilePictureImg}}></img>
-          <p class="right">{{item.username}}</p>
-          <p>{{item.bio}}</p>
+          <img class="profileImage z-depth-1 hoverable" ng-src = "{{$ctrl.items.profilePictureImg}}"></img>
         </div>
+        <p class="right">{{$ctrl.items.username}}</p>
+        <p>{{$ctrl.items.bio}}</p>
       </div>
     </div>
 
@@ -15,23 +15,8 @@
     <hr></hr>
     <div class=" row profilePostContainer">
       <div class=" profPostPicContainer col s12 m4" ng-repeat="post in $ctrl.posts">
-        <img class="profPostImage z-depth-1 hoverable" src={{post.post_img}} alt="one of your posts">
+        <img class="profPostImage z-depth-1 hoverable" ng-src="{{post.post_img}}"alt="one of your posts">
       </div>
-      <!-- <div class="col s12 m4 profPostPicContainer">
-        <img class="profPostImage z-depth-1 hoverable" src="/poses/downwardfacingdog.jpg" alt="one of your posts">
-      </div>
-      <div class="col s12 m4 profPostPicContainer">
-        <img class="profPostImage z-depth-1 hoverable" src="/poses/squat.jpg" alt="one of your posts">
-      </div>
-      <div class=" profPostPicContainer col s12 m4">
-        <img class="profPostImage z-depth-1 hoverable" src="/poses/tree.jpg" alt="one of your posts">
-      </div>
-      <div class=" profPostPicContainer col s12 m4">
-        <img class="profPostImage z-depth-1 hoverable" src="/poses/triangle.jpg" alt="one of your posts">
-      </div>
-      <div class=" profPostPicContainer col s12 m4">
-        <img class="profPostImage z-depth-1 hoverable" src="/poses/seatedspinaltwist.jpg" alt="one of your posts">
-      </div> -->
     </div>
 
 
