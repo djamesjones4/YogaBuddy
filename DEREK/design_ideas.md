@@ -5,6 +5,7 @@
   - combine with scrollspy to have the scroll happen automatically
 - check out scrollfire
 <hr>
+
 ## To do:
 - <del>fixed header bar with page scrolling under</del>
 - <del>indent menu icon</del>

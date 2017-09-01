@@ -9,7 +9,7 @@ console.log('in service')
 
   function service($http, SplashService) {
     console.log('service function')
-     this.logIn = function(userInfo) {
+    this.logIn = function(userInfo) {
       console.log('in service')
       $http.post('/api/users', userInfo)
       .then(user => {

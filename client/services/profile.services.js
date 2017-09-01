@@ -7,8 +7,9 @@
   service.$inject = ['$http']
 
   function service($http, $stateParams, $state, $filter) {
-    this.allItems = function() { // Grabs all items
-      return $http.get('/api/users').then(all => {
+    this.allItems = function(id) { // Grabs all items or items by id passed from token
+
+      return $http.get(id ? `/api/users/${id}` : "/api/users").then(all => {
           console.log("All user data: ", all.data)
           return all.data
         }, err => {

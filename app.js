@@ -10,6 +10,7 @@ const posts = require('./routes/posts')
 const poses = require('./routes/poses')
 const comments = require('./routes/comments')
 const feed = require('./routes/feed')
+const signUp = require('./routes/signup')
 // const contributors = require('./routes/contributors')
 
 const app = express()
@@ -25,9 +26,10 @@ app.use('/api/users', users)
 app.use('/api/posts', posts)
 app.use('/api/posts', comments)
 app.use('/api/poses', poses)
+app.use('/api/signup', signUp)
 // app.use('/api/contributors', contributors)
 
-// feeds all angular routes to index.html
+// feeds all angular routes index.html
 app.use('*', function(req, res, next) {
   res.sendFile('index.html', { root: path.join(__dirname, '/client') })
 })

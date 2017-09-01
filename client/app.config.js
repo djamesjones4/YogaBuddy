@@ -7,6 +7,7 @@
   function config($stateProvider, $urlRouterProvider, $locationProvider) {
     // Setting clean URLs (no hashtags)
     $locationProvider.html5Mode(true)
+    $urlRouterProvider.when('/index.html', '/')
     // DEFINING ADDITIONAL STATES FOR Single-Page-Application
     $stateProvider
     // 1st STATE (on click in this case)
@@ -24,6 +25,11 @@
         name: 'profile',
         url: '/profile',
         component: 'profile'
+      })
+      .state({
+        name: 'newUser',
+        url: '/createAccount',
+        component: 'newUser'
       })
   }
   // END CONFIG FUNCTION
