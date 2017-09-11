@@ -4,6 +4,7 @@ const express = require('express')
 const router = express.Router()
 const knex = require('../knex')
 const jwt = require('jsonwebtoken')
+const humps = require('humps')
 // const boom = require('boom')
 const bcrypt = require('bcryptjs')
 // const ev = require('express-validation')
@@ -31,9 +32,9 @@ console.log('username: ', username, 'password: ', req.body.password, 'email: ', 
           knex('users')
             .insert({ username: `${username}`, hashed_password: `${hashed}`, email: `${email}`, bio: `${userBio}` })
             .returning(['id', 'username', 'email', 'bio'])
-            .then(userData =>  {
+            .then((userData) => {
               console.log('new user data: ', userData)
-              res.status(200).send(userData)
+              res.send(humps.camelizeKeys(userData))
             })
         } else {
           res.status(409).json({ error: 'username already exists' })

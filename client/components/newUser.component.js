@@ -16,8 +16,38 @@
     function onInit() {
       $state.go('newUser')
     }
+
+    // from john papa style guide
+    function activate() {
+    /**
+     * Step 1
+     * Ask the getAvengers function for the
+     * avenger data and wait for the promise
+     */
+    return getAvengers().then(function() {
+        /**
+         * Step 4
+         * Perform an action on resolve of final promise
+         */
+        logger.info('Activated Avengers View');
+    })
+}
     vm.createUser = function() {
-      NewUserService.createUser(vm.newUserInfo)
+      /**
+      * Step 2
+      * Ask the data service for the data and wait
+      * for the promise
+      */
+      return NewUserService.createUser(vm.newUserInfo)
+      .then((data) => {
+        /**
+              * Step 3
+              * set the data and resolve the promise
+              */
+        vm.newUserInfo = data
+
+        return vm.newUserInfo
+      })
     }
   }
 })()
