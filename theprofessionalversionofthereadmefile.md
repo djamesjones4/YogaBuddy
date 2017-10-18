@@ -22,8 +22,8 @@ Yoga Buddy is a single page application that allows for users to interact about 
 - Derek Jones
 ![](https://avatars5.githubusercontent.com/u/21081026?v=4&s=460)
   - [GitHub](https://github.com/djamesjones4)
-  - [LinkedIn](ADD_URL_HERE)
-  - [Personal Website](ADD_URL_HERE)
+  - [LinkedIn](https://www.linkedin.com/in/derek-james-jones/)
+  - [Personal Website](https://derek-jones.herokuapp.com/projects/doctorsnote)
 
 
 - Haley Kalb
