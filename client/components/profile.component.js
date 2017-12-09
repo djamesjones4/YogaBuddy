@@ -20,7 +20,7 @@
       ProfileService.allItems()
         .then((allitems) => {
           // get by id after tokens are set up
-          vm.items = allitems[0]
+          vm.items = allitems[5]
         })
 
       ProfileService.allPosts()

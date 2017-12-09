@@ -74,6 +74,7 @@ text-align: left;
 #sidenav-overlay {
     /*margin-left: 300px;*/
     z-index: 1 !important;
+    opacity: 0 !important;
     /*position: static !important;*/
     /*display: none;*/
 }
@@ -98,14 +99,18 @@ h2 {
   padding-top: 5px;
   text-align: center;
   background-color: rgba(255,255,255,0.9);
-  position: sticky;
+  position: fixed;
   display: block;
   z-index: 2;
   vertical-align: middle;
   font-family: 'Amatic SC', cursive;
-
+  margin-bottom: 10em;
 }
 
+.feedCont {
+  padding-top: 7em;
+
+}
 .menuIcon {
   margin-left: 15px;
   margin-top: 10px;
@@ -199,28 +204,43 @@ h2 {
 /* ----------------------------------------------------------------------- */
 /* BEGIN PROFILE STYLING */
 .profileContainer {
-  padding: 10px;
+  /*padding: 10px;*/
+  padding-top: 7em !important;
 }
 .profileHead{
   background-color: white;
   border-radius: 10px;
   max-height: 200px;
-  padding: 10px;
+  padding: 1em !important;
   vertical-align: middle;
 }
 img.profileImage {
   vertical-align: middle;
   max-height: 180px;
   border-radius: 35%;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 .profPicContainer {
-  vertical-align: middle !important;
-  margin: 10px;
+  /*vertical-align: middle !important;*/
+  /*margin: 10px !important;*/
   /*padding-top: 10px;*/
   max-height: 180px;
+  display: inline;
+}
+.userBio {
+  display: inline-block;
+  vertical-align: top;
 }
 
+.username {
+  display: run-in;
+  font-family: 'Amatic SC';
+  font-size: 24pt;
+  vertical-align: top;
+  text-align: center;
+  /*padding-top: 0px !important;*/
+  margin: 0 !important;
+}
 .profilePostContainer {
   /*max-height: 500px;*/
 }
@@ -230,12 +250,37 @@ img.profileImage {
   height: 160px;
   width: 500px;
   margin-bottom: 25px;
+  overflow: hidden: ;
+
 }
 
 .profPostImage {
-  max-height: 100%;
-  max-width: 100%;
-  border-radius: 10px;
+  /*max-height: 160px;
+  max-width: 300px;
+  /*border-radius: 10px;*/
+  margin-top: 2em;
+  height: auto;
+  max-width: 200px;
+  /*vertical-align: middle !important;*/
+  /*align-items: center;*/
+
+  left: 50%;
+  position: relative;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /*max-width: 100%;*/
+
+  position: relative;
+    /*float: left;*/
+    /*width:  200px;
+    height: 160px;*/
+    /*background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;*/
+    border-radius: 10px;
 }
 
 .postTitle {

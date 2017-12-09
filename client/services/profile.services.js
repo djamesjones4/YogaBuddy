@@ -8,7 +8,7 @@
 
   function service($http, $stateParams, $state, $filter) {
     this.allItems = function(id) {
-
+      // ternary = condition ? explr1 : explr2
       return $http.get(id ? `/api/users/${id}` : "/api/users").then(all => {
         console.log("All user data: ", all.data)
 

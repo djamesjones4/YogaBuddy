@@ -38,7 +38,7 @@ exports.seed = function(knex, Promise) {
           {
             id: 3,
             // TO DO: change to actual hash after user creation is working. DEVELOPMEN PASSWORD ONLY
-            username: "DerekJones",
+            username: "Derek Jones",
             hashed_password: "password",
             email: "derek.jones@gmail.com",
             profile_picture_img: "/images/profilePictures/derek.jpg",
