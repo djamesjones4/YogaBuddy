@@ -1,0 +1,129 @@
+.animated {
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+}
+
+#animated-nav-lotus-top {
+  z-index: 2;
+  background-image: url(/images/lotus/lotus_top.png);
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 0px;
+  margin-left: 30px;
+  margin-right: 0px;
+}
+
+
+/* Pulse */
+
+/*@keyframes lotus-pulse {
+  25% {
+    transform: scale(1.0);
+  }
+  75% {
+    transform: scale(.98);
+  }
+}*/
+
+.lotus-pulse {
+  z-index: 1;
+  background-size: contain;
+  width: 50px;
+  height: 30px;
+  background-image: url(/images/lotus/lotus_bottom.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*display: inline-block;*/
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-right: 0px;
+  /*transform: perspective(1px) translateZ(0);
+  animation-name: lotus-pulse;
+  animation-duration: 2.75s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;*/
+}
+ /* END NAV LOTUS STYLING*/
+/* -----------------------------------------------*/
+
+/* ---------------------------------------------------- */
+
+/* START LOGIN LOTUS STYLING */
+
+.animated-login-top {
+  animation-duration: 4s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce-login {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2.3em);
+  }
+}
+
+.bounce-login {
+  animation-name: bounce-login;
+}
+
+#animated-login-top {
+  z-index: 2;
+  background-image: url(/images/lotus/lotus_top.png);
+  height: 10em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 0px;
+  margin-left: 3.75em;
+  margin-right: 0px;
+}
+
+
+/* Pulse */
+
+/*@keyframes lotus-pulse {
+  25% {
+    transform: scale(1.0);
+  }
+  75% {
+    transform: scale(.98);
+  }
+}*/
+
+.lotus-login-bottom-pulse {
+  z-index: 1;
+  background-size: contain;
+  /*width: 50px;*/
+  height: 8em;
+  background-image: url(/images/lotus/lotus_bottom.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*display: inline-block;*/
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-right: 0px;
+  /*transform: perspective(1px) translateZ(0);
+  animation-name: lotus-pulse;
+  animation-duration: 2.75s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;*/
+}

@@ -1,15 +1,77 @@
-<div class="splashContainer row container">
-  <div class="formContainer col m6 offset-m4">
-    <form class="login col m6" action="" method="post"
-    ng-submit="$ctrl.logIn()">
-      <input type="text" id="usernameInput" name="username" value="" placeholder="username" ng-model="$ctrl.userAuth.username">
-      <input type="text" id="passwordInput" name="password" value="" placeholder="password" ng-model="$ctrl.userAuth.password">
-      <button type="submit" name="submit">Log In</button>
-    </form>
-    <div class="createAccount">
-      <span class="center">Or</span>
-      <a id="createAccountAnchor" ui-sref="newUser">Create Account</a>
+<!-- BEGIN HEADER -->
+<div class="pageHead row">
+
+  <div class="col m12 s12 pageTitle z-depth-2">
+    <!-- nav -->
+    <div class="nav-wrapper">
+      <ul id="slide-out" class="side-nav">
+        <li><a ui-sref="profile" style="font-size: 35px !important;">Profile</a></li>
+        <li>
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a class="collapsible-header" style="font-size: 35px !important;"> Poses <i class="material-icons right">arrow_drop_down</i></a>
+              <div class="collapsible-body">
+                <ul class="chakraList ">
+                  <li class="chakras"><a style="font-size: 25px !important;" class="chakraAnchor" href="#!">Hip Openers<img id="chakra2" src="/images/chakras/chakra2.png" alt="chakra2" width="20%" class="chakraImg"></a></li>
+                  <li class="chakras"><a style="font-size: 25px !important;" class="chakraAnchor" href="#!">Twists<img id="chakra3" src="/images/chakras/chakra3.png" alt="chakra3" width="20%" class="chakraImg"></a></li>
+                  <li class="chakras"><a style="font-size: 25px !important;" class="chakraAnchor" href="#!">Back Bends<img id="chakra4" src="/images/chakras/chakra4.png" alt="chakra4" width="20%" class="chakraImg"></a></li>
+                  <li class="chakras"><a style="font-size: 25px !important;" class="chakraAnchor" href="#!">Forward Bends<img id="chakra5" src="/images/chakras/chakra5.png" alt="chakra5" width="20%" class="chakraImg"></a></li>
+                  <li class="chakras"><a style="font-size: 25px !important;" class="chakraAnchor" href="#!">Balance<img id="chakra6" src="/images/chakras/chakra6.png"  onloadeddata=""alt="chakra6" width="20%" class="chakraImg"></a></li>
+                  <li class="chakras"><a style="font-size: 25px !important;" class="chakraAnchor" href="#!">Inversions<img id="chakra7" src="/images/chakras/chakra7.png" alt="chakra7" width="20%" class="chakraImg"></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a ui-sref="feed" style="font-size: 35px !important;">Feed</a></li>
+        <li><a href="#!" style="font-size: 35px !important;">Contributors</a></li>
+        <li><a href="#!" style="font-size: 35px !important;">Sign Out</a></li>
+      </ul>
     </div>
+
+    <a href="#" data-activates="slide-out" class="left button-collapse  menuIcon">
+      <i class="material-icons" id="menuIcon">menu</i>
+    </a>
+
+    <div class="left navLotusContainer" id="navLotusContainerLogin">
+      <!-- <div id="animated-nav-lotus-top" class="animated bounce"></div>
+      <div class="lotus-pulse"></div> -->
+    </div>
+
+    <!-- end nav -->
+
+    <h2>YOGA BUDDY</h2>
+
+
+  </div>
+</div>
+
+<!-- END HEADER -->
+
+<div class="lotusRow row">
+  <a href="#" data-activates="slide-out" class="button-collapse center col m8 offset-m2 s8 offset-s4">
+    <div id="animated-login-top" class="animated-login-top bounce-login"></div>
+    <div class="lotus-login-bottom-pulse"></div>
+  </a>
+</div>
+<div class="splashContainer row container z-depth-1">
+  <div class="formContainer col m12 s12">
+    <form class="loginForm row" action="" method="post" ng-submit="$ctrl.logIn()">
+      <div class="col m12 s12">
+        <div class="inputRow">
+          <input type="text" id="usernameInput" name="username" value="" placeholder="username" ng-model="$ctrl.userAuth.username">
+          <input type="text" id="passwordInput" name="password" value="" placeholder="password" ng-model="$ctrl.userAuth.password">
+        </div>
+        <div class="loginActionContainer col m8 offset-m3">
+          <button id="loginButton" type="submit" name="submit">Log In</button>
+          <div class="createAccount">
+            <a id="createAccountAnchor" ui-sref="newUser">Create Account</a>
+            <span class="center">Or</span>
+            <a href="#">Demo Site</a>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
 
 </div>

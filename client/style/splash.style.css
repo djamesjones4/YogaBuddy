@@ -1,0 +1,22 @@
+.splashContainer {
+  /*margin-top: 10em;*/
+}
+
+.loginButton {
+  display: inline;
+}
+
+.createAccount {
+  display: inline;
+  margin-left: 5em;
+}
+.inputRow {
+  display: inline;
+}
+.loginForm {
+  padding: 4em;
+  padding-right: 4em !important;
+}
+.loginActionContainer {
+
+}
