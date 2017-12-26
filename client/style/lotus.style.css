@@ -71,6 +71,7 @@
   animation-fill-mode: both;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  z-index: 5 !important;
 }
 
 @keyframes bounce-login {
@@ -87,14 +88,16 @@
 }
 
 #animated-login-top {
-  z-index: 2;
+  z-index: 4 !important;
   background-image: url(/images/lotus/lotus_top.png);
   height: 10em;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-top: 0px;
-  margin-left: 3.75em;
-  margin-right: 0px;
+  background-position: center;
+  /*margin-top: 0px;
+  margin-left: 1.75em;
+  margin-right: 0px;*/
+  animation-iteration-count: infinite;
 }
 
 
@@ -110,16 +113,17 @@
 }*/
 
 .lotus-login-bottom-pulse {
-  z-index: 1;
+  z-index: 5;
   background-size: contain;
   /*width: 50px;*/
   height: 8em;
   background-image: url(/images/lotus/lotus_bottom.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   /*display: inline-block;*/
   vertical-align: middle;
-  margin-left: 20px;
+  /*margin-left: 20px;*/
   margin-right: 0px;
   /*transform: perspective(1px) translateZ(0);
   animation-name: lotus-pulse;

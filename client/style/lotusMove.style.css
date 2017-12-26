@@ -3,65 +3,269 @@
   position: absolute;
   transition: left 1s ease-out, top 1s ease-out;
 }
-
-.animated-login-top {
-  animation-duration: 4s;
+.lotus-login-bottom-pulse {
+  animation-duration: 2s;
   animation-fill-mode: both;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
+  z-index: 3;
+  background-image: url(/images/lotus/lotus_bottom.png);
+  height: 8em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  /*transform: perspective(1px) translateZ(0);*/
+}
+.move-lotus-bottom {
+  animation-name: move-lotus-bottom;
 }
 
-@keyframes bounce-login {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(2.3em);
-  }
-}
-
-/*.bounce-login {
-  animation-name: bounce-login;
-}*/
-
-#animated-login-top {
-  z-index: 2;
+.animated-login-top-move {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  z-index: 3 !important;
   background-image: url(/images/lotus/lotus_top.png);
   height: 10em;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-top: 0px;
-  margin-left: 3.75em;
-  margin-right: 0px;
+  position: relative;
+  animation-iteration-count: 1 !important;
+}
+.move-lotus-top {
+  animation-name: move-login;
+}
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) {
+
+  @keyframes move-login {
+    0% {
+      transform: translate(0,0) scale(1.0);
+    }
+    50% {
+      /*transform: translateY(2.3em);*/
+    }
+    100% {
+      transform: translate(-42vw,-22vh) scale(.3);
+    }
+  }
+
+  /* bottom */
+
+  @keyframes move-lotus-bottom {
+    /*25% {
+      transform: scale(1.0);
+    }
+    75% {
+      transform: scale(.98);
+    }*/
+
+    0% {
+      transform: translate(0,0) scale(1.0);
+
+    }
+    50% {
+      /*transform: translateY(2.3em);*/
+    }
+    100% {
+      transform: translate(-42vw, -18em) scale(.3);
+
+    }
+  }
+
 }
 
+/* portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 
-/* Pulse */
-
-/*@keyframes lotus-pulse {
-  25% {
-    transform: scale(1.0);
+  .lotus-login-bottom-pulse {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    z-index: 3;
+    background-image: url(/images/lotus/lotus_bottom.png);
+    height: 10em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    /*transform: perspective(1px) translateZ(0);*/
   }
-  75% {
-    transform: scale(.98);
+  .move-lotus-bottom {
+    animation-name: move-lotus-bottom;
   }
-}*/
 
-.lotus-login-bottom-pulse {
-  z-index: 1;
-  background-size: contain;
-  /*width: 50px;*/
-  height: 8em;
-  background-image: url(/images/lotus/lotus_bottom.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  /*display: inline-block;*/
-  vertical-align: middle;
-  margin-left: 20px;
-  margin-right: 0px;
-  /*transform: perspective(1px) translateZ(0);
-  animation-name: lotus-pulse;
-  animation-duration: 2.75s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;*/
+  .animated-login-top {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    z-index: 3 !important;
+    background-image: url(/images/lotus/lotus_top.png);
+    height: 12em !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    animation-iteration-count: infinite !important;
+    animation-name: bounce;
+  }
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1em);
+  }
+}
+
+  .animated-login-top-move {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    z-index: 3 !important;
+    background-image: url(/images/lotus/lotus_top.png);
+    height: 2em !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    animation-iteration-count: 1 !important;
+    animation-name: move-login;
+  }
+  /*.move-lotus-top {
+    animation-name: move-login;
+  }*/
+
+  @keyframes move-login {
+    0% {
+      transform: translate(0,0) scale(1.0);
+    }
+    50% {
+      /*transform: translateY(2.3em);*/
+    }
+    100% {
+      transform: translate(-42vw,-30vh) scale(.3);
+    }
+  }
+
+  /* bottom */
+
+  @keyframes move-lotus-bottom {
+    /*25% {
+      transform: scale(1.0);
+    }
+    75% {
+      transform: scale(.98);
+    }*/
+
+    0% {
+      transform: translate(0,0) scale(1.0);
+
+    }
+    50% {
+      /*transform: translateY(2.3em);*/
+    }
+    100% {
+      transform: translate(-42vw, -45vh) scale(.3);
+
+    }
+  }
+}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) {
+  .lotus-login-bottom-pulse {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    z-index: 3;
+    background-image: url(/images/lotus/lotus_bottom.png);
+    height: 3em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    /*transform: perspective(1px) translateZ(0);*/
+  }
+  .move-lotus-bottom {
+    animation-name: move-lotus-bottom;
+  }
+
+  .animated-login-top {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    z-index: 3 !important;
+    background-image: url(/images/lotus/lotus_top.png);
+    height: 4em !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    animation-iteration-count: infinite !important;
+    animation-name: bounce;
+  }
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1em);
+  }
+}
+
+  .animated-login-top-move {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    z-index: 3 !important;
+    background-image: url(/images/lotus/lotus_top.png);
+    height: 2em !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    animation-iteration-count: 1 !important;
+    animation-name: move-login;
+  }
+  /*.move-lotus-top {
+    animation-name: move-login;
+  }*/
+
+  @keyframes move-login {
+    0% {
+      transform: translate(0,0) scale(1.0);
+    }
+    50% {
+      /*transform: translateY(2.3em);*/
+    }
+    100% {
+      transform: translate(-42vw,-30vh) scale(.3);
+    }
+  }
+
+  /* bottom */
+
+  @keyframes move-lotus-bottom {
+    /*25% {
+      transform: scale(1.0);
+    }
+    75% {
+      transform: scale(.98);
+    }*/
+
+    0% {
+      transform: translate(0,0) scale(1.0);
+
+    }
+    50% {
+      /*transform: translateY(2.3em);*/
+    }
+    100% {
+      transform: translate(-42vw, -45vh) scale(.3);
+
+    }
+  }
+}
+
+.lotusCol {
+  z-index: 2;
 }

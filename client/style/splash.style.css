@@ -8,7 +8,7 @@
 
 .createAccount {
   display: inline;
-  margin-left: 5em;
+  /*margin-left: 5em;*/
 }
 .inputRow {
   display: inline;
@@ -18,5 +18,8 @@
   padding-right: 4em !important;
 }
 .loginActionContainer {
+
+}
+.lotusRow {
 
 }

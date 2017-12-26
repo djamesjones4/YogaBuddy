@@ -1,19 +1,93 @@
 /*.lotusContainer {
   /*margin-left: 2em !important;*/
   /*display: inline;*/
-}
+/*}*/
 
 .menuIcon {
   margin-top: 3em;
   color: black !important;
-
+  /*margin-left: 15px;*/
+  margin-top: 10px;
 }
 
 
-a {
+/*a {
   color: black !important;
-}
+}*/
 
 .pageHead {
   padding-bottom: 7em;
+}
+
+.collapsible-header {
+  padding-left: 32px !important;
+}
+
+.chakraList {
+
+}
+.chakras {
+  vertical-align: baseline;
+  line-height: 100px;
+  text-align: left;
+  padding: 10px !important;
+  vertical-align: middle !important;
+}
+.chakraAnchor {
+  vertical-align: middle !important;
+}
+
+
+.chakraImg {
+  margin-left: 70px;
+  vertical-align: middle;
+  /*display;*/
+}
+#chakra2 {
+
+}
+
+#chakra3 {
+  margin-left: 103px;
+}
+#chakra4 {
+  margin-left: 72px;
+}
+#chakra5 {
+  margin-left: 45px;
+
+}
+#chakra6 {
+  margin-left: 90px;
+
+}
+#chakra7 {
+  margin-left: 66px;
+}
+
+#newPostButton {
+  background-color: rgba(241, 41, 35, 0.7);
+  border-radius: 35px;
+  color: black;
+}
+
+.side-nav {
+/*background: rgba(0, 0, 0, 0.4)*/
+font-size: 50px !important;
+text-align: left;
+/*font-weight: bold !important;*/
+z-index: 77 !important;
+}
+
+#sidenav-overlay {
+    /*margin-left: 300px;*/
+    z-index: 1 !important;
+    opacity: 0 !important;
+    /*position: static !important;*/
+    /*display: none;*/
+    display: none;
+}
+
+.navbar-fixed {
+/*z-index: 997 !important;*/
 }

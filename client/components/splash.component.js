@@ -22,5 +22,15 @@
       SplashService.logIn(vm.userAuth)
 
     }
+
+    vm.moveLotus = function() {
+      let lotus_top = document.getElementById('animated-login-top')
+      let lotus_bottom = document.getElementById('animated-login-bottom')
+      // let menuIcon = document.getElementById('menuIcon')
+      // menuIcon.style.display = 'none'
+      lotus_top.className = 'animated-login-top-move move-lotus-top'
+      lotus_bottom.className = 'lotus-login-bottom-pulse move-lotus-bottom'
+      // wait 2 seconds and then &state.go('feed')
+    }
   }
 })()

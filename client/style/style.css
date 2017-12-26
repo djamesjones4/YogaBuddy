@@ -12,7 +12,7 @@ body {
   background-color: #F1F1F1;
 }
 
-.collapsible-header {
+/*.collapsible-header {
   padding-left: 32px !important;
 }
 
@@ -33,10 +33,10 @@ body {
 
 .chakraImg {
   margin-left: 70px;
-  vertical-align: middle;
+  vertical-align: middle;*/
   /*display;*/
-}
-#chakra2 {
+/*}*/
+/*#chakra2 {
 
 }
 
@@ -64,24 +64,24 @@ body {
   color: black;
 }
 
-.side-nav {
+.side-nav {*/
 /*background: rgba(0, 0, 0, 0.4)*/
-font-size: 50px !important;
-text-align: left;
+/*font-size: 50px !important;
+text-align: left;*/
 /*font-weight: bold !important;*/
-}
+/*}*/
 
-#sidenav-overlay {
+/*#sidenav-overlay {*/
     /*margin-left: 300px;*/
-    z-index: 1 !important;
+    /*z-index: 1 !important;*/
     opacity: 0 !important;
     /*position: static !important;*/
     /*display: none;*/
-}
+/*}*/
 
-.navbar-fixed {
+/*.navbar-fixed {*/
 /*z-index: 997 !important;*/
-}
+/*}*/
 /* ------------------------------------------------------------------*/
 /*FEED PAGE*/
 
@@ -91,7 +91,7 @@ text-align: left;
 .card-image {
 }
 h2 {
-  padding-right: 110px;
+  /*padding-right: -50vw;*/
 }
 .pageTitle {
   top: 0;
@@ -101,7 +101,7 @@ h2 {
   background-color: rgba(255,255,255,0.9);
   position: fixed;
   display: block;
-  z-index: 2;
+  z-index: 1;
   vertical-align: middle;
   font-family: 'Amatic SC', cursive;
   margin-bottom: 10em;
@@ -110,10 +110,6 @@ h2 {
 .feedCont {
   padding-top: 7em;
 
-}
-.menuIcon {
-  margin-left: 15px;
-  margin-top: 10px;
 }
 
 .container {
@@ -219,7 +215,7 @@ img.profileImage {
 /* SPLASH PAGE */
 
 .splashContainer {
-background-color: white ;
+/*background-color: white ;*/
 }
 .login {
 

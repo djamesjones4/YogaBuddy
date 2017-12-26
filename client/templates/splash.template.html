@@ -39,8 +39,9 @@
     </div>
 
     <!-- end nav -->
-
-    <h2>YOGA BUDDY</h2>
+    <div class="titleContainer center">
+      <h2>YOGA BUDDY</h2>
+    </div>
 
 
   </div>
@@ -49,25 +50,35 @@
 <!-- END HEADER -->
 
 <div class="lotusRow row">
-  <a href="#" data-activates="slide-out" class="button-collapse center col m8 offset-m2 s8 offset-s4">
-    <div id="animated-login-top" class="animated-login-top bounce-login"></div>
-    <div class="lotus-login-bottom-pulse"></div>
-  </a>
+  <div class="center  lotusCol col m8 offset-m2 s8 offset-s2">
+    <div id="animated-login-top" class="animated-login-top lotus bounce-login"></div>
+    <div id="animated-login-bottom"class="lotus-login-bottom-pulse lotus"></div>
+  </div>
 </div>
-<div class="splashContainer row container z-depth-1">
-  <div class="formContainer col m12 s12">
+<div class="splashContainer row container">
+  <div class="formContainer col m6 s12 offset-m3">
     <form class="loginForm row" action="" method="post" ng-submit="$ctrl.logIn()">
       <div class="col m12 s12">
         <div class="inputRow">
           <input type="text" id="usernameInput" name="username" value="" placeholder="username" ng-model="$ctrl.userAuth.username">
           <input type="text" id="passwordInput" name="password" value="" placeholder="password" ng-model="$ctrl.userAuth.password">
         </div>
-        <div class="loginActionContainer col m8 offset-m3">
-          <button id="loginButton" type="submit" name="submit">Log In</button>
-          <div class="createAccount">
-            <a id="createAccountAnchor" ui-sref="newUser">Create Account</a>
-            <span class="center">Or</span>
-            <a href="#">Demo Site</a>
+        <div class="row buttonAction">
+          <div class="loginActionContainer col m12 s12">
+            <div class="row loginButtonRow center">
+              <button id="loginButton" type="submit" name="submit">Log In</button>
+            </div>
+            <div class="row creatAccountRow center">
+              <div class="createAccount">
+                <a id="createAccountAnchor" ui-sref="newUser">Create Account</a>
+              </div>
+            </div>
+            <div class="row orRow center">
+              <span class="">Or</span>
+            </div>
+            <div class="row demoRow center">
+              <a href="#" ng-click="$ctrl.moveLotus()">Demo Site</a>
+            </div>
           </div>
         </div>
       </div>
